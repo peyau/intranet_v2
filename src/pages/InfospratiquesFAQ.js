@@ -1,12 +1,14 @@
 import React from "react";
-import Navigation from "../components/Navigation";
+import NavBar from "../components/Navigation";
+import NavBarInfospratiques from "../components/NavigationInfospratiques";
 
 const InfospratiquesFAQ = () => {
   return (
     <div>
-      <Navigation />
+      <NavBar />
       <h1>FAQ</h1>
-    </div>
+      <NavBarInfospratiques />
+      </div>
   );
 };
 

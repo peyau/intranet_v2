@@ -17,6 +17,7 @@ import InfospratiquesFAQ from "./pages/InfospratiquesFAQ";
 const App = () => {
   return (
     <Router>
+      <div className="container">
       <Routes>
         <Route path="/" element={<Accueil />} />
         <Route path="/encodage" element={<Encodage />} />
@@ -48,6 +49,7 @@ const App = () => {
 
         <Route path="*" element={<Accueil />} />
       </Routes>
+      </div>
     </Router>
   );
 };

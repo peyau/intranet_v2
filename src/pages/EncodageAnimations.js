@@ -1,11 +1,13 @@
 import React from "react";
-import Navigation from "../components/Navigation";
+import NavBar from "../components/Navigation";
+import NavBarEncodage from "../components/NavigationEncodage";
 
 const EncodageAnimations = () => {
   return (
     <div>
-      <Navigation />
+      <NavBar />
       <h1>Encodage des animations</h1>
+      <NavBarEncodage />
     </div>
   );
 };

@@ -1,0 +1,34 @@
+$font-1: "font-1", sans-serif;
+
+$color-1: #f7723d;
+$color-2: salmon;
+$color-3: #363538;
+$white: rgb(243, 243, 243);
+
+@mixin verticalCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $white;
+  font-family: $font-1;
+  // @include verticalCenter;
+}
+
+li {
+  list-style-type: none;
+}
+
+.container {
+  width: 50%;
+  margin: 0 auto;
+}
+

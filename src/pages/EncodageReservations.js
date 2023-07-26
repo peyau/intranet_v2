@@ -1,11 +1,13 @@
 import React from "react";
-import Navigation from "../components/Navigation";
+import NavBar from "../components/Navigation";
+import NavBarEncodage from "../components/NavigationEncodage";
 
 const EncodageReservations = () => {
   return (
     <div>
-      <Navigation />
+      <NavBar />
       <h1>Encodage des réservations</h1>
+      <NavBarEncodage />
     </div>
   );
 };

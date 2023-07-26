@@ -1,9 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const NavigationEncodage = () => {
+const NavBarEncodage = () => {
   return (
-    <div className="navigationEncodage">
+    <div className="NavBarSecondaire">
       <ul>
         <li>
           <NavLink to="/encodage/animations">Animations</NavLink>
@@ -19,4 +19,4 @@ const NavigationEncodage = () => {
   );
 };
 
-export default NavigationEncodage;
+export default NavBarEncodage;

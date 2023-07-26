@@ -1,10 +1,10 @@
 import React from "react";
-import Navigation from "../components/Navigation";
+import NavBar from "../components/Navigation";
 
 const PagePerso = () => {
   return (
     <div>
-      <Navigation />
+      <NavBar />
       <h1>Page perso</h1>
     </div>
   );

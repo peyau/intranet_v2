@@ -1,11 +1,14 @@
 import React from "react";
-import Navigation from "../components/Navigation";
+import { NavLink } from "react-router-dom";
+import NavBar from "../components/Navigation";
+import NavBarInfospratiques from "../components/NavigationInfospratiques";
 
 const InfosPratiques = () => {
   return (
     <div>
-      <Navigation />
+      <NavBar />
       <h1>Infos pratiques</h1>
+      <NavBarInfospratiques />
     </div>
   );
 };
