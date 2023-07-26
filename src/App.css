@@ -1,0 +1,82 @@
+/* ... Other styles ... */
+
+/* Style for the navigation bar */
+.navigation {
+  background-color: #007bff; /* Bleuté */
+  color: #fff; /* Texte en blanc */
+  padding: 10px;
+}
+
+.navigation ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation li {
+  padding: 10px;
+}
+
+.navigation a {
+  color: #fff;
+  text-decoration: none;
+  position: relative; /* Added position relative to the link */
+}
+
+/* Style for the active link with line */
+.navigation .active {
+  /* Remove text-decoration to prevent the underline */
+  text-decoration: none;
+}
+
+/* Pseudo-element to create the line under the active link */
+.navigation .active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px; /* Adjust the position of the line from the bottom */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #b8c4d1; /* Bleuté plus foncé for the line color */
+}
+
+
+/* Style for the navigation dropdown */
+.nav-dropdown {
+  position: relative;
+}
+
+/* Style for the sub-navigation */
+.sub-nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  background-color: #f0f0f0; /* Fond gris pour la sous-navigation */
+  padding: 5px 0;
+}
+
+/* Display the sub-navigation items as a vertical list */
+.nav-dropdown:hover .sub-nav {
+  display: block;
+}
+
+.sub-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* Display the sub-navigation items as a vertical list */
+  display: block;
+}
+
+.sub-nav li a {
+  color: #000; /* Texte en noir */
+  text-decoration: none;
+  padding: 5px 10px;
+  display: block;
+}
+
+.sub-nav li a:hover {
+  background-color: #d3d3d3; /* Fond gris plus foncé au survol */
+}
