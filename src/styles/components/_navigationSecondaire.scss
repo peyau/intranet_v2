@@ -16,6 +16,7 @@
 .NavBarSecondaire li {
   padding: 10px;
   min-width: 150px; /* Définir une largeur minimale pour les éléments li */
+  transition: color 0.2s, opacity 0.2s; /* Ajouter une transition de 0.2s pour la couleur et la transparence */
 }
 
 .NavBarSecondaire a {
@@ -23,11 +24,18 @@
   text-decoration: none;
   position: relative;
   font-size: 18px; /* Augmenter la taille de la police */
+  transition: color 0.2s; /* Ajouter une transition de 0.2s pour la couleur */
 }
 
 /* Style for the active link in the NavBarEncodage */
 .NavBarSecondaire .active {
-  color: $color-orange; /* Texte en orange pour le lien actif */
+  color: $color-orangeSite; /* Texte en orange pour le lien actif */
   font-size: 20px; /* Augmenter la taille de la police pour le lien actif */
   font-weight: bold; /* Mettre en gras pour le lien actif */
+}
+
+/* Hover effect */
+.NavBarSecondaire li:hover {
+  color: rgba($color-orangeSite, 0.8); /* Appliquer la couleur orangeSite avec une transparence de 0.8 au survol */
+  opacity: 0.8; /* Rendre l'élément partiellement transparent au survol */
 }

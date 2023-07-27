@@ -1,6 +1,7 @@
 $font-1: "font-1", sans-serif;
 
 $color-orange: #f7723d;
+$color-orangeSite: #F29425;
 $color-salmon: salmon;
 $color-darkGrey: #363538;
 $white: rgb(243, 243, 243);
@@ -38,7 +39,7 @@ h1::after {
   width: 90%; /* Largeur de la bordure égale à 90% de la largeur du titre */
   height: 4px; /* Hauteur de la bordure */
   background-color: $color-orange; /* Couleur de la bordure */
-  position: absolute;
+  position: relative;
   bottom: -8px; /* Décaler la bordure vers le bas pour la positionner sous le texte */
   left: 5%; /* Décaler la bordure de 5% vers la droite pour aligner avec le texte */
   border-radius:50px;

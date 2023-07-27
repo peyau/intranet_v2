@@ -1,5 +1,11 @@
 
 /* Style for the navigation bar */
+.NavBarGlobal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .NavBar {
   padding: 2% 0;
   margin: 15px;
@@ -30,7 +36,7 @@
 
 /* Style for the active link */
 .NavBar .active {
-  color: $color-orange; /* Texte en orange pour le lien actif */
+  color: $color-orangeSite; /* Texte en orange pour le lien actif */
   font-size: 20px; /* Augmenter la taille de la police pour le lien actif */
   font-weight: bold; /* Mettre en gras pour le lien actif */
 }

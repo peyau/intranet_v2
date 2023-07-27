@@ -15,23 +15,25 @@ const NavBar = () => {
   };
 
   return (
-    <div className="NavBar">
+    <div className="NavBarGlobal">
       <TitreEtLogo />
-      <ul>
-        <NavLink to="/encodage">
-          <li>Encodage</li>
-        </NavLink>
-        <NavLink to="/infospratiques">
-          <li>Infos pratiques</li>
-        </NavLink>
-        <NavLink to="/perso">
-          <li>Page personnelle</li>
-        </NavLink>
-      </ul>
-      <button className="login-button" onClick={handleOpenModal}>
-        Se connecter
-      </button>
-      <Modal isOpen={isModalOpen} onClose={handleCloseModal} />
+      <div className="NavBar">
+        <ul>
+          <NavLink to="/encodage">
+            <li>Encodage</li>
+          </NavLink>
+          <NavLink to="/infospratiques">
+            <li>Infos pratiques</li>
+          </NavLink>
+          <NavLink to="/perso">
+            <li>Page personnelle</li>
+          </NavLink>
+        </ul>
+        <button className="login-button" onClick={handleOpenModal}>
+          Se connecter
+        </button>
+        <Modal isOpen={isModalOpen} onClose={handleCloseModal} />
+      </div>
     </div>
   );
 };
