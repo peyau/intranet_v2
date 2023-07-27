@@ -32,8 +32,15 @@
   color: $color-1; /* Texte en orange pour le lien actif */
 }
 
-/* Style for the navigation dropdown */
-.nav-dropdown {
-  position: relative;
+.login-button {
+  /* Ajoutez ici le style spécifique pour le bouton "se connecter" */
+  /* Par exemple : */
+  background-color: $color-2; /* Utilisation de la variable $color-2 définie dans index.scss */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  /* Ajoutez d'autres styles selon vos préférences */
 }
-

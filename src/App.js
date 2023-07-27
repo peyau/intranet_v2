@@ -18,37 +18,37 @@ const App = () => {
   return (
     <Router>
       <div className="container">
-      <Routes>
-        <Route path="/" element={<Accueil />} />
-        <Route path="/encodage" element={<Encodage />} />
-        <Route path="/encodage/animations" element={<EncodageAnimations />} />
-        <Route path="/encodage/absences" element={<EncodageAbsences />} />
-        <Route
-          path="/encodage/reservations"
-          element={<EncodageReservations />}
-        />
-        <Route path="/infospratiques" element={<InfosPratiques />} />
-        <Route
-          path="/infospratiques/equipe"
-          element={<InfospratiquesEquipe />}
-        />
-        <Route
-          path="/infospratiques/horaires"
-          element={<InfospratiquesHoraires />}
-        />
-        <Route
-          path="/infospratiques/numeros"
-          element={<InfospratiquesNumerosTelephone />}
-        />
-        <Route
-          path="/infospratiques/protocoles"
-          element={<InfospratiquesProtocoles />}
-        />
-        <Route path="/infospratiques/FAQ" element={<InfospratiquesFAQ />} />
-        <Route path="/perso" element={<PagePerso />} />
+        <Routes>
+          <Route path="/" element={<Accueil />} />
+          <Route path="/encodage" element={<Encodage />} />
+          <Route path="/encodage/animations" element={<EncodageAnimations />} />
+          <Route path="/encodage/absences" element={<EncodageAbsences />} />
+          <Route
+            path="/encodage/reservations"
+            element={<EncodageReservations />}
+          />
+          <Route path="/infospratiques" element={<InfosPratiques />} />
+          <Route
+            path="/infospratiques/equipe"
+            element={<InfospratiquesEquipe />}
+          />
+          <Route
+            path="/infospratiques/horaires"
+            element={<InfospratiquesHoraires />}
+          />
+          <Route
+            path="/infospratiques/numeros"
+            element={<InfospratiquesNumerosTelephone />}
+          />
+          <Route
+            path="/infospratiques/protocoles"
+            element={<InfospratiquesProtocoles />}
+          />
+          <Route path="/infospratiques/FAQ" element={<InfospratiquesFAQ />} />
+          <Route path="/perso" element={<PagePerso />} />
 
-        <Route path="*" element={<Accueil />} />
-      </Routes>
+          <Route path="*" element={<Accueil />} />
+        </Routes>
       </div>
     </Router>
   );
