@@ -9,6 +9,7 @@ const Modal = ({ isOpen, onClose }) => {
         onClose(); // Appeler la fonction de fermeture de la modal
       }
     };
+
     const handleOutsideClick = (event) => {
       if (!event.target.closest(".modal-content")) {
         // Fermer la modal si le clic est en dehors de la modal

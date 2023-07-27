@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import Modal from "./Modal";
+import TitreEtLogo from "./TitreEtLogo";
 
 const NavBar = () => {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -15,19 +16,17 @@ const NavBar = () => {
 
   return (
     <div className="NavBar">
+      <TitreEtLogo />
       <ul>
-        <li>
-          <NavLink to="/">Accueil</NavLink>
-        </li>
-        <li>
-          <NavLink to="/encodage">Encodage</NavLink>
-        </li>
-        <li>
-          <NavLink to="/infospratiques">Infos pratiques</NavLink>
-        </li>
-        <li>
-          <NavLink to="/perso">Page personnelle</NavLink>
-        </li>
+        <NavLink to="/encodage">
+          <li>Encodage</li>
+        </NavLink>
+        <NavLink to="/infospratiques">
+          <li>Infos pratiques</li>
+        </NavLink>
+        <NavLink to="/perso">
+          <li>Page personnelle</li>
+        </NavLink>
       </ul>
       <button className="login-button" onClick={handleOpenModal}>
         Se connecter

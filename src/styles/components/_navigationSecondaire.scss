@@ -1,31 +1,33 @@
 /* Style for the NavBarEncodage */
 .NavBarSecondaire {
-    padding: 10px;
-    width: 85%; /* Limiter la largeur à 85% */
-    display: flex;
-    justify-content: flex-start; /* Aligner le contenu à gauche */
-    align-items: center;
-  }
-  
-  .NavBarSecondaire ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .NavBarSecondaire li {
-    padding: 10px;
-  }
-  
-  .NavBarSecondaire a {
-    color: $color-3;
-    text-decoration: none;
-    position: relative;
-    font-size: 18px; /* Augmenter la taille de la police */
-  }
-  
-  /* Style for the active link in the NavBarEncodage */
-  .NavBarSecondaire .active {
-    color: $color-1; /* Texte en orange pour le lien actif */
-  }
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start; /* Aligner le contenu à gauche */
+  align-items: center;
+}
+
+.NavBarSecondaire ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.NavBarSecondaire li {
+  padding: 10px;
+  min-width: 150px; /* Définir une largeur minimale pour les éléments li */
+}
+
+.NavBarSecondaire a {
+  color: $color-darkGrey;
+  text-decoration: none;
+  position: relative;
+  font-size: 18px; /* Augmenter la taille de la police */
+}
+
+/* Style for the active link in the NavBarEncodage */
+.NavBarSecondaire .active {
+  color: $color-orange; /* Texte en orange pour le lien actif */
+  font-size: 20px; /* Augmenter la taille de la police pour le lien actif */
+  font-weight: bold; /* Mettre en gras pour le lien actif */
+}

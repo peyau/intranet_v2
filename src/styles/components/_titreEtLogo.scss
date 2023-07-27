@@ -1,0 +1,40 @@
+/* _titreEtLogo.scss */
+.titre-et-logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px;
+    z-index: 2;
+    position: relative; /* Utiliser le positionnement relatif */
+    margin-right: auto; /* Centrer le composant à gauche de la div navbar */
+  }
+  
+  .custom-align-left {
+    justify-content: flex-start; /* Annuler l'alignement à droite pour cette div */
+  }
+  
+  .logo {
+    width: 40px !important;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .titre-container {
+    display: flex;
+    flex-direction: column; /* Utiliser une disposition en colonne pour les deux lignes */
+  }
+  
+  .bibliotheque {
+    color: black;
+  }
+  
+  .barre-oblique {
+    margin: 15px; /* Augmenter l'espace autour de la barre oblique */
+    font-size: 2.5rem; /* Modifier la taille de la barre oblique */
+    color: $color-orange; /* Modifier la couleur de la barre oblique */
+  }
+  
+  .intranet {
+    color: $color-orange;
+  }

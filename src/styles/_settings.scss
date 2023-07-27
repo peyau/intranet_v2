@@ -1,8 +1,8 @@
 $font-1: "font-1", sans-serif;
 
-$color-1: #f7723d;
-$color-2: salmon;
-$color-3: #363538;
+$color-orange: #f7723d;
+$color-salmon: salmon;
+$color-darkGrey: #363538;
 $white: rgb(243, 243, 243);
 
 @mixin verticalCenter {
@@ -20,15 +20,35 @@ $white: rgb(243, 243, 243);
 body {
   background: $white;
   font-family: $font-1;
+  color: $color-darkGrey;
   // @include verticalCenter;
 }
 
+h1 {
+  font-size: 2rem; /* Taille de police */
+  color: $color-orange; /* Couleur du texte */
+  position: relative; /* Ajouter position relative pour positionner la bordure */
+  display: inline-block; /* Permettre à la bordure de s'arrêter à la fin du texte */
+  margin-bottom: 20px; /* Ajouter de l'espace en dessous du titre */
+}
+
+h1::after {
+  content: ""; /* Ajouter un élément pseudo-élément pour créer la bordure */
+  display: block;
+  width: 90%; /* Largeur de la bordure égale à 90% de la largeur du titre */
+  height: 4px; /* Hauteur de la bordure */
+  background-color: $color-orange; /* Couleur de la bordure */
+  position: absolute;
+  bottom: -8px; /* Décaler la bordure vers le bas pour la positionner sous le texte */
+  left: 5%; /* Décaler la bordure de 5% vers la droite pour aligner avec le texte */
+  border-radius:50px;
+}
 li {
   list-style-type: none;
 }
 
 .container {
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
 }
 

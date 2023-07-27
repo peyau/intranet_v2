@@ -1,8 +1,8 @@
 
 /* Style for the navigation bar */
 .NavBar {
-  padding: 10px;
-  width: 85%; /* Modifier la largeur à 85% */
+  padding: 2% 0;
+  margin: 15px;
   display: flex;
   justify-content: flex-end; /* Aligner le contenu à droite */
   align-items: center;
@@ -18,10 +18,11 @@
 
 .NavBar li {
   padding: 15px; /* Espacement plus marqué entre les éléments */
+  min-width: 120px;
 }
 
 .NavBar a {
-  color: $color-3;
+  color: $color-darkGrey;
   text-decoration: none;
   position: relative;
   font-size: 18px; /* Augmenter la taille de la police */
@@ -29,13 +30,15 @@
 
 /* Style for the active link */
 .NavBar .active {
-  color: $color-1; /* Texte en orange pour le lien actif */
+  color: $color-orange; /* Texte en orange pour le lien actif */
+  font-size: 20px; /* Augmenter la taille de la police pour le lien actif */
+  font-weight: bold; /* Mettre en gras pour le lien actif */
 }
 
 .login-button {
   /* Ajoutez ici le style spécifique pour le bouton "se connecter" */
   /* Par exemple : */
-  background-color: $color-2; /* Utilisation de la variable $color-2 définie dans index.scss */
+  background-color: $color-salmon; /* Utilisation de la variable $color-darkGrey définie dans index.scss */
   color: white;
   border: none;
   padding: 10px 20px;

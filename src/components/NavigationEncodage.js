@@ -5,15 +5,17 @@ const NavBarEncodage = () => {
   return (
     <div className="NavBarSecondaire">
       <ul>
-        <li>
-          <NavLink to="/encodage/animations">Animations</NavLink>
-        </li>
-        <li>
-          <NavLink to="/encodage/absences">Absences</NavLink>
-        </li>
-        <li>
-          <NavLink to="/encodage/reservations">Réservation</NavLink>
-        </li>
+        <NavLink to="/encodage/animations">
+          <li>Animations</li>
+        </NavLink>
+
+        <NavLink to="/encodage/absences">
+          <li>Absences</li>
+        </NavLink>
+
+        <NavLink to="/encodage/reservations">
+          <li>Réservation</li>
+        </NavLink>
       </ul>
     </div>
   );
