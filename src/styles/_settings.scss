@@ -36,14 +36,13 @@ h1 {
 h1::after {
   content: ""; /* Ajouter un élément pseudo-élément pour créer la bordure */
   display: block;
-  width: 90%; /* Largeur de la bordure égale à 90% de la largeur du titre */
   height: 4px; /* Hauteur de la bordure */
   background-color: $color-orange; /* Couleur de la bordure */
   position: relative;
   bottom: -8px; /* Décaler la bordure vers le bas pour la positionner sous le texte */
-  left: 5%; /* Décaler la bordure de 5% vers la droite pour aligner avec le texte */
   border-radius:50px;
 }
+
 li {
   list-style-type: none;
 }

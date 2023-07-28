@@ -15,8 +15,8 @@
 
 .NavBarSecondaire li {
   padding: 10px;
-  min-width: 150px; /* Définir une largeur minimale pour les éléments li */
-  transition: color 0.2s, opacity 0.2s; /* Ajouter une transition de 0.2s pour la couleur et la transparence */
+  min-width: 150px;
+  transition: color 0.3s, opacity 0.3s;
 }
 
 .NavBarSecondaire a {
@@ -35,6 +35,7 @@
 }
 
 /* Hover effect */
-.NavBarSecondaire li:hover {
-  color: rgba($color-orangeSite, 0.8); /* Appliquer la couleur orangeSite avec une transparence de 0.8 au survol */
+.NavBarSecondaire li:not(.active):hover {
+  color: $color-orangeSite; /* Nouvelle règle : Appliquer la couleur orangeSite sans transparence au survol, uniquement pour les éléments non-actifs */
 }
+

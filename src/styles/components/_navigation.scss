@@ -23,12 +23,13 @@
 }
 
 .NavBar li {
-  padding: 20px; /* Espacement plus marqué entre les éléments */
-  min-width: 120px;
+  padding: 10px;
+  min-width: 150px;
+  transition: color 0.3s, opacity 0.3s;
 }
 
-.NavBar li:hover {
-  color: rgba($color-orangeSite, 0.8); /* Appliquer la couleur orangeSite avec une transparence de 0.8 au survol */
+.NavBar li:not(.active):hover {
+  color: $color-orangeSite; /* Nouvelle règle : Appliquer la couleur orangeSite sans transparence au survol, uniquement pour les éléments non-actifs */
 }
 
 .NavBar a {
@@ -54,3 +55,4 @@
   border-radius: 5px;
   cursor: pointer;
 }
+
