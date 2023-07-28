@@ -23,8 +23,12 @@
 }
 
 .NavBar li {
-  padding: 15px; /* Espacement plus marqué entre les éléments */
+  padding: 20px; /* Espacement plus marqué entre les éléments */
   min-width: 120px;
+}
+
+.NavBar li:hover {
+  color: rgba($color-orangeSite, 0.8); /* Appliquer la couleur orangeSite avec une transparence de 0.8 au survol */
 }
 
 .NavBar a {
@@ -36,20 +40,17 @@
 
 /* Style for the active link */
 .NavBar .active {
-  color: $color-orangeSite; /* Texte en orange pour le lien actif */
-  font-size: 20px; /* Augmenter la taille de la police pour le lien actif */
-  font-weight: bold; /* Mettre en gras pour le lien actif */
+  color: $color-orangeSite;
+  font-size: 20px; 
+  font-weight: bold; 
 }
 
 .login-button {
-  /* Ajoutez ici le style spécifique pour le bouton "se connecter" */
-  /* Par exemple : */
-  background-color: $color-salmon; /* Utilisation de la variable $color-darkGrey définie dans index.scss */
+  background-color: $color-salmon; 
   color: white;
   border: none;
   padding: 10px 20px;
   font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
-  /* Ajoutez d'autres styles selon vos préférences */
 }

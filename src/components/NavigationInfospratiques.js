@@ -5,21 +5,25 @@ const NavBarInfospratiques = () => {
   return (
     <div className="NavBarSecondaire">
       <ul>
-        <li>
-          <NavLink to="/infospratiques/equipe">Equipe</NavLink>
-        </li>
-        <li>
-          <NavLink to="/infospratiques/horaires">Horaires</NavLink>
-        </li>
-        <li>
-          <NavLink to="/infospratiques/numeros">Numéros</NavLink>
-        </li>
-        <li>
-          <NavLink to="/infospratiques/protocoles">Protocoles</NavLink>
-        </li>
-        <li>
-          <NavLink to="/infospratiques/FAQ">FAQ</NavLink>
-        </li>
+        <NavLink to="/infospratiques/equipe">
+          <li>Equipe</li>
+        </NavLink>
+
+        <NavLink to="/infospratiques/horaires">
+          <li>Horaires</li>
+        </NavLink>
+
+        <NavLink to="/infospratiques/numeros">
+          <li>Numéros</li>
+        </NavLink>
+
+        <NavLink to="/infospratiques/protocoles">
+          <li>Protocoles</li>
+        </NavLink>
+
+        <NavLink to="/infospratiques/FAQ">
+          <li>FAQ</li>
+        </NavLink>
       </ul>
     </div>
   );
