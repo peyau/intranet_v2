@@ -35,7 +35,7 @@
 }
 
 /* Hover effect */
-.NavBarSecondaire li:not(.active):hover {
-  color: $color-orangeSite; /* Nouvelle règle : Appliquer la couleur orangeSite sans transparence au survol, uniquement pour les éléments non-actifs */
+.NavBarSecondaire li:hover {
+  color: $color-orangeSite; /* Appliquer la couleur orangeSite avec une transparence de 0.8 au survol */
 }
 

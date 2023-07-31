@@ -28,8 +28,8 @@
   transition: color 0.3s, opacity 0.3s;
 }
 
-.NavBar li:not(.active):hover {
-  color: $color-orangeSite; /* Nouvelle règle : Appliquer la couleur orangeSite sans transparence au survol, uniquement pour les éléments non-actifs */
+.NavBar li:hover {
+  color: $color-orangeSite; /* Appliquer la couleur orangeSite avec une transparence de 0.8 au survol */
 }
 
 .NavBar a {
