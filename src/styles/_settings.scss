@@ -1,16 +1,10 @@
-$font-1: "font-1", sans-serif;
+$font-1: "font-1", "Century Gothic";
 
 $color-orange: #f7723d;
 $color-orangeSite: #F29425;
 $color-salmon: salmon;
 $color-darkGrey: #363538;
 $white: rgb(243, 243, 243);
-
-@mixin verticalCenter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 * {
   padding: 0;
@@ -41,10 +35,6 @@ h1::after {
   position: relative;
   bottom: -8px; /* Décaler la bordure vers le bas pour la positionner sous le texte */
   border-radius:50px;
-}
-
-li {
-  list-style-type: none;
 }
 
 .container {
