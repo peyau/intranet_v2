@@ -1,13 +1,13 @@
 import React from "react";
 import NavBar from "../components/Navigation";
-import NavBarInfospratiques from "../components/NavigationInfospratiques";
+import NavBarInfosPratiques from "../components/NavigationInfosPratiques";
 
 const InfosPratiques = () => {
   return (
     <div>
       <NavBar />
       <h1>Infos pratiques</h1>
-      <NavBarInfospratiques />
+      <NavBarInfosPratiques />
     </div>
   );
 };

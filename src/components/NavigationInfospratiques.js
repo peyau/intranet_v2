@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const NavBarInfospratiques = () => {
+const NavBarInfosPratiques = () => {
   return (
     <div className="NavBarSecondaire">
       <ul>
@@ -29,4 +29,4 @@ const NavBarInfospratiques = () => {
   );
 };
 
-export default NavBarInfospratiques;
+export default NavBarInfosPratiques;
