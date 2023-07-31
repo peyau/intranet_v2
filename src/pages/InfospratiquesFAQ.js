@@ -2,7 +2,7 @@ import React from "react";
 import NavBar from "../components/Navigation";
 import NavBarInfosPratiques from "../components/NavigationInfosPratiques";
 
-const InfospratiquesFAQ = () => {
+const InfosPratiquesFAQ = () => {
   return (
     <div>
       <NavBar />
@@ -12,4 +12,4 @@ const InfospratiquesFAQ = () => {
   );
 };
 
-export default InfospratiquesFAQ;
+export default InfosPratiquesFAQ;

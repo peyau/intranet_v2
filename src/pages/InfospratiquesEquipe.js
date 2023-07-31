@@ -2,7 +2,7 @@ import React from "react";
 import NavBar from "../components/Navigation";
 import NavBarInfosPratiques from "../components/NavigationInfosPratiques";
 
-const InfospratiquesEquipe = () => {
+const InfosPratiquesEquipe = () => {
   return (
     <div>
       <NavBar />
@@ -12,4 +12,4 @@ const InfospratiquesEquipe = () => {
   );
 };
 
-export default InfospratiquesEquipe;
+export default InfosPratiquesEquipe;
