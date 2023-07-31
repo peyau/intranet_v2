@@ -1,6 +1,6 @@
 import React from "react";
-import NavBar from "../components/Navigation";
-import NavBarEncodage from "../components/NavigationEncodage";
+import NavBar from "../../components/Navigation";
+import NavBarEncodage from "../../components/NavigationEncodage";
 
 const Encodage = () => {
   return (

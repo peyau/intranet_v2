@@ -1,6 +1,6 @@
 import React from "react";
-import NavBar from "../components/Navigation";
-import NavBarInfosPratiques from "../components/NavigationInfosPratiques";
+import NavBar from "../../components/Navigation";
+import NavBarInfosPratiques from "../../components/NavigationInfosPratiques";
 
 const InfosPratiques = () => {
   return (

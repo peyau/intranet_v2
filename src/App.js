@@ -2,17 +2,17 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Accueil from "./pages/Accueil";
-import Encodage from "./pages/Encodage";
-import InfosPratiques from "./pages/InfosPratiques";
+import Encodage from "./pages/Encodage/Encodage";
+import InfosPratiques from "./pages//InfosPratiques/InfosPratiques";
 import PagePerso from "./pages/PagePerso";
-import EncodageAnimations from "./pages/EncodageAnimations";
-import EncodageReservations from "./pages/EncodageReservations";
-import EncodageAbsences from "./pages/EncodageAbsences";
-import InfospratiquesEquipe from "./pages/InfospratiquesEquipe";
-import InfospratiquesHoraires from "./pages/InfospratiquesHoraires";
-import InfospratiquesNumerosTelephone from "./pages/InfospratiquesNumerosTelephone";
-import InfospratiquesProtocoles from "./pages/InfospratiquesProtocoles";
-import InfospratiquesFAQ from "./pages/InfospratiquesFAQ";
+import Animations from "./pages/Encodage/Animations";
+import Reservations from "./pages/Encodage/Reservations";
+import Absences from "./pages/Encodage/Absences";
+import Equipe from "./pages/InfosPratiques/Equipe";
+import Horaires from "./pages/InfosPratiques/Horaires";
+import NumerosTelephone from "./pages/InfosPratiques/NumerosTelephone";
+import Protocoles from "./pages/InfosPratiques/Protocoles";
+import FAQ from "./pages/InfosPratiques/FAQ";
 
 const App = () => {
   return (
@@ -21,30 +21,18 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Accueil />} />
           <Route path="/encodage" element={<Encodage />} />
-          <Route path="/encodage/animations" element={<EncodageAnimations />} />
-          <Route path="/encodage/absences" element={<EncodageAbsences />} />
-          <Route
-            path="/encodage/reservations"
-            element={<EncodageReservations />}
-          />
+          <Route path="/encodage/animations" element={<Animations />} />
+          <Route path="/encodage/absences" element={<Absences />} />
+          <Route path="/encodage/reservations" element={<Reservations />} />
           <Route path="/infospratiques" element={<InfosPratiques />} />
-          <Route
-            path="/infospratiques/equipe"
-            element={<InfospratiquesEquipe />}
-          />
-          <Route
-            path="/infospratiques/horaires"
-            element={<InfospratiquesHoraires />}
-          />
+          <Route path="/infospratiques/equipe" element={<Equipe />} />
+          <Route path="/infospratiques/horaires" element={<Horaires />} />
           <Route
             path="/infospratiques/numeros"
-            element={<InfospratiquesNumerosTelephone />}
+            element={<NumerosTelephone />}
           />
-          <Route
-            path="/infospratiques/protocoles"
-            element={<InfospratiquesProtocoles />}
-          />
-          <Route path="/infospratiques/FAQ" element={<InfospratiquesFAQ />} />
+          <Route path="/infospratiques/protocoles" element={<Protocoles />} />
+          <Route path="/infospratiques/FAQ" element={<FAQ />} />
           <Route path="/perso" element={<PagePerso />} />
 
           <Route path="*" element={<Accueil />} />
