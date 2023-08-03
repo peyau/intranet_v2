@@ -14,8 +14,11 @@
 }
 
 .navbar-secondaire li {
-  padding: 10px;
-  min-width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 25px; /* Réduire le padding horizontal */
+  margin: 0 15px; /* Ajouter un espacement horizontal entre les éléments */
   transition: color 0.3s, opacity 0.3s;
 }
 
@@ -24,7 +27,6 @@
   text-decoration: none;
   position: relative;
   font-size: 18px; /* Augmenter la taille de la police */
-  transition: color 0.2s; /* Ajouter une transition de 0.2s pour la couleur */
 }
 
 /* Style for the active link in the NavBarEncodage */
