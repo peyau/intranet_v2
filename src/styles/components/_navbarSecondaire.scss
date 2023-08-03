@@ -19,7 +19,6 @@
   justify-content: center;
   padding: 25px 25px; /* Réduire le padding horizontal */
   margin: 0 15px; /* Ajouter un espacement horizontal entre les éléments */
-  transition: color 0.3s, opacity 0.3s;
 }
 
 .navbar-secondaire a {
@@ -34,10 +33,11 @@
   color: $color-orangeSite; /* Texte en orange pour le lien actif */
   font-size: 20px; /* Augmenter la taille de la police pour le lien actif */
   font-weight: bold; /* Mettre en gras pour le lien actif */
+  transition: color 0.3s, opacity 0.3s;
 }
 
 /* Hover effect */
-.navbar-secondaire li:hover {
+.navbar-secondaire a:hover {
   color: $color-orangeSite; /* Appliquer la couleur orangeSite avec une transparence de 0.8 au survol */
 }
 
