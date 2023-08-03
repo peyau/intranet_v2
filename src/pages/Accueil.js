@@ -1,10 +1,10 @@
 import React from "react";
-import NavBar from "../components/Navigation";
+import NavBarGlobal from "../components/NavBarGlobal";
 
 const Accueil = () => {
   return (
     <div>
-      <NavBar />
+      <NavBarGlobal />
       <h1>Accueil</h1>
     </div>
   );

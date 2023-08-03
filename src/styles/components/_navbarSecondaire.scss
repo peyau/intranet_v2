@@ -1,25 +1,25 @@
 /* Style for the NavBarEncodage */
-.NavBarSecondaire {
+.navbar-secondaire {
   padding: 10px;
   display: flex;
   justify-content: flex-start; /* Aligner le contenu à gauche */
   align-items: center;
 }
 
-.NavBarSecondaire ul {
+.navbar-secondaire ul {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.NavBarSecondaire li {
+.navbar-secondaire li {
   padding: 10px;
   min-width: 150px;
   transition: color 0.3s, opacity 0.3s;
 }
 
-.NavBarSecondaire a {
+.navbar-secondaire a {
   color: $color-darkGrey;
   text-decoration: none;
   position: relative;
@@ -28,14 +28,14 @@
 }
 
 /* Style for the active link in the NavBarEncodage */
-.NavBarSecondaire .active {
+.navbar-secondaire .active {
   color: $color-orangeSite; /* Texte en orange pour le lien actif */
   font-size: 20px; /* Augmenter la taille de la police pour le lien actif */
   font-weight: bold; /* Mettre en gras pour le lien actif */
 }
 
 /* Hover effect */
-.NavBarSecondaire li:hover {
+.navbar-secondaire li:hover {
   color: $color-orangeSite; /* Appliquer la couleur orangeSite avec une transparence de 0.8 au survol */
 }
 

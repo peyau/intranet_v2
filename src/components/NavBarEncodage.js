@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const NavBarEncodage = () => {
   return (
-    <div className="NavBarSecondaire">
+    <div className="navbar-secondaire">
       <ul>
         <NavLink to="/encodage/animations">
           <li>Animations</li>

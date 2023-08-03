@@ -1,11 +1,11 @@
 import React from "react";
-import NavBar from "../../components/Navigation";
-import NavBarInfosPratiques from "../../components/NavigationInfosPratiques";
+import NavBarGlobal from "../../components/NavBarGlobal";
+import NavBarInfosPratiques from "../../components/NavBarInfosPratiques";
 
 const NumerosTelephone = () => {
   return (
     <div>
-      <NavBar />
+      <NavBarGlobal />
       <h1>Numéros de téléphone</h1>
       <NavBarInfosPratiques />
     </div>

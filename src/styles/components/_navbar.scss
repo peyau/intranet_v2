@@ -1,0 +1,42 @@
+.navbar {
+  padding: 2% 0;
+  margin: 15px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+}
+
+.navbar li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px; /* Réduire le padding horizontal */
+  margin: 0 15px; /* Ajouter un espacement horizontal entre les éléments */
+  transition: color 0.3s, opacity 0.3s;
+}
+
+.navbar li:hover {
+  color: $color-orangeSite;
+}
+
+.navbar a {
+  color: $color-darkGrey;
+  text-decoration: none;
+  position: relative;
+  font-size: 18px;
+}
+
+.navbar .active {
+  color: $color-orangeSite;
+  font-size: 20px;
+  font-weight: bold;
+}

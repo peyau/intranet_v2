@@ -1,11 +1,11 @@
 import React from "react";
-import NavBar from "../../components/Navigation";
-import NavBarInfosPratiques from "../../components/NavigationInfosPratiques";
+import NavBarGlobal from "../../components/NavBarGlobal";
+import NavBarInfosPratiques from "../../components/NavBarInfosPratiques";
 
 const Equipe = () => {
   return (
     <div>
-      <NavBar />
+      <NavBarGlobal />
       <h1>Equipe</h1>
       <NavBarInfosPratiques />
     </div>

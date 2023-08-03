@@ -1,5 +1,5 @@
 /* _titreEtLogo.scss */
-.TitreEtLogo {
+.titre-logo {
     display: flex;
     align-items: center;
     font-size: 1.2rem;
@@ -10,7 +10,7 @@
     margin-right: auto; /* Centrer le composant à gauche de la div navbar */
   }
 
-  .TitreEtLogo a {
+  .titre-logo a {
     text-decoration: none;
   }
 

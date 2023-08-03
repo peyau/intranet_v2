@@ -1,11 +1,11 @@
 import React from "react";
-import NavBar from "../../components/Navigation";
-import NavBarEncodage from "../../components/NavigationEncodage";
+import NavBarGlobal from "../../components/NavBarGlobal";
+import NavBarEncodage from "../../components/NavBarEncodage";
 
 const Absences = () => {
   return (
     <div>
-      <NavBar />
+      <NavBarGlobal />
       <h1>Encodage des absences</h1>
       <NavBarEncodage />
     </div>

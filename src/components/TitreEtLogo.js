@@ -5,8 +5,8 @@ import logo from "../styles/img/logo_intranet_1.png";
 
 const TitreEtLogo = () => {
   return (
-    <div className="TitreEtLogo">
-      <NavLink to="/" className="TitreEtLogo">
+    <div className="titre-logo">
+      <NavLink to="/" className="titre-logo">
         <img src={logo} alt="Logo" className="logo" />
         <div className="titre-container">
           <span className="bibliotheque">

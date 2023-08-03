@@ -1,0 +1,16 @@
+.login-button {
+    background-color: $color-salmon; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: auto; /* Pour pousser le bouton tout à droite */
+    align-self: center; /* Pour aligner verticalement le bouton au centre */
+  }
+  
+  .div-button-connexion {
+    display: flex;
+    align-items: center; /* Pour aligner verticalement la div du bouton */
+  }
