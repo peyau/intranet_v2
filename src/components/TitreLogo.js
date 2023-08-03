@@ -7,7 +7,7 @@ const TitreLogo = () => {
   return (
     <div className="titre-logo">
       <NavLink to="/" className="titre-logo">
-        <img src={logo} alt="Logo" className="logo" />
+        <img src={logo} alt="" className="logo" />
         <div className="titre-container">
           <span className="bibliotheque">
             Bibliothèque <br /> de Mouscron
