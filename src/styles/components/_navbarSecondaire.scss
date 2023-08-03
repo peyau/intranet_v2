@@ -26,6 +26,7 @@
   text-decoration: none;
   position: relative;
   font-size: 18px; /* Augmenter la taille de la police */
+  transition: color 0.3s, opacity 0.3s;
 }
 
 /* Style for the active link in the NavBarEncodage */
@@ -33,7 +34,6 @@
   color: $color-orangeSite; /* Texte en orange pour le lien actif */
   font-size: 20px; /* Augmenter la taille de la police pour le lien actif */
   font-weight: bold; /* Mettre en gras pour le lien actif */
-  transition: color 0.3s, opacity 0.3s;
 }
 
 /* Hover effect */
