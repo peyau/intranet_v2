@@ -1,9 +1,9 @@
 // TitreEtLogo.js
 import React from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../styles/img/logo_intranet_1.png";
+import logo from "../assets/img/logo_intranet_1.png";
 
-const TitreEtLogo = () => {
+const TitreLogo = () => {
   return (
     <div className="titre-logo">
       <NavLink to="/" className="titre-logo">
@@ -20,4 +20,4 @@ const TitreEtLogo = () => {
   );
 };
 
-export default TitreEtLogo;
+export default TitreLogo;
