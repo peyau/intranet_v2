@@ -13,6 +13,7 @@ import Horaires from "./pages/InfosPratiques/Horaires";
 import NumerosTelephone from "./pages/InfosPratiques/NumerosTelephone";
 import Protocoles from "./pages/InfosPratiques/Protocoles";
 import FAQ from "./pages/InfosPratiques/FAQ";
+import Calendar from "react-calendar";
 
 const App = () => {
   return (
@@ -38,6 +39,7 @@ const App = () => {
           <Route path="*" element={<Accueil />} />
         </Routes>
       </div>
+      <div className="calendar-fixed"><Calendar /></div>
     </Router>
   );
 };
