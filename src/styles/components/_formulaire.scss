@@ -1,0 +1,69 @@
+/* FormulaireAbsences.css */
+.form-container {
+    text-align: center;
+    margin: 2rem auto;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-content {
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .form-title {
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: left; /* Aligner le texte à gauche */
+  }
+  
+  .generic-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
+  }
+  
+  .generic-input-container {
+    width: 100%;
+    display: flex; /* Ajouter un affichage en ligne */
+    flex-direction: column; /* Afficher les éléments en colonne */
+    align-items: flex-start; /* Aligner les éléments à gauche */
+  }
+  
+  .generic-select,
+  .generic-input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  
+  .time-input-container,
+  .date-input-container {
+    display: none;
+  }
+  
+  /* Styles conditionnels pour les champs de temps et de date */
+  .generic-select[value="half-day"] ~ .time-input-container,
+  .generic-select[value="multiple-days"] ~ .date-input-container {
+    display: block;
+  }
+  
+  .generic-select:focus,
+  .generic-input:focus {
+    outline: 2px solid #007bff;
+  }
+  
+  .generic-label {
+    text-align: left; /* Aligner le texte à gauche */
+    margin-bottom: 0.5rem; /* Ajouter un espacement en bas */
+  }
