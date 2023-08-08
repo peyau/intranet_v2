@@ -83,19 +83,6 @@ const FormulaireAbsences = () => {
             />
           </div>
         )}
-        <div className="generic-input-container">
-          <label htmlFor="reason" className="generic-label">
-            Raison :
-          </label>
-          <input
-            type="text"
-            id="reason"
-            className="generic-input"
-            value={reason}
-            onChange={(e) => setReason(e.target.value)}
-            required
-          />
-        </div>
 
         <button type="submit" className="modal-button">
           Soumettre
