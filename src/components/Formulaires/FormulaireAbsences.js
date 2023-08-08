@@ -84,7 +84,7 @@ const FormulaireAbsences = () => {
           </div>
         )}
 
-        <button type="submit" className="modal-button">
+        <button type="submit" className="form-button">
           Soumettre
         </button>
       </form>
