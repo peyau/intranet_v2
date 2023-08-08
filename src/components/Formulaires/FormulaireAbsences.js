@@ -1,13 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const FormulaireAbsences = () => {
+  const [showForm, setShowForm] = useState(false);
   const [absenceType, setAbsenceType] = useState("conge");
   const [absenceDate, setAbsenceDate] = useState("");
   const [absenceDuration, setAbsenceDuration] = useState("full-day");
   const [startTime, setStartTime] = useState("");
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
-  const [reason, setReason] = useState("");
+
+  useEffect(() => {
+    setShowForm(true); // Montrer le formulaire une fois que le composant est monté
+  }, []);
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
@@ -15,7 +19,7 @@ const FormulaireAbsences = () => {
   };
 
   return (
-    <div className="form-container">
+    <div className={`form-container ${showForm ? "fade-in" : "hidden"}`}>
       <form className="generic-form" onSubmit={handleFormSubmit}>
         <label htmlFor="absence-type">Type d'absence :</label>
         <select
