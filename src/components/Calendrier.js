@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 
-function MyCalendar() {
+function Calendrier() {
   const [selectedDate, setSelectedDate] = useState(new Date());
 
   const handleDateChange = date => {
@@ -12,10 +12,9 @@ function MyCalendar() {
 
   return (
     <div>
-      <h2>Calendrier</h2>
-      <Calendar onChange={handleDateChange} value={selectedDate} />
+      <Calendar onChange={handleDateChange} value={selectedDate} showWeekNumbers />
     </div>
   );
 }
 
-export default MyCalendar;
+export default Calendrier;
