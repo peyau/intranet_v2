@@ -6,38 +6,18 @@
   border-radius: 8px;
   background-color: #f9f9f9;
   width: 90%;
-  box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+  transition: height 0.5s ease; /* Ajout de la transition pour la hauteur */
 
-  .option-selector {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-  
-    label {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 8px;
-      cursor: pointer;
-      position: relative;
-      transition: color 0.3s;
-      color: $color-darkGrey;
-  
-      input[type="radio"] {
-        display: none;
-      }
-  
-      &.selected {
-        color: $color-orangeSite;
-        font-size: 18px;
-        font-weight: bold;
-      }
-  
-      &:hover {
-        color: $color-orangeSite;
-      }
-    }
+  &.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  &.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
   }
 
   .date-fields {
@@ -81,6 +61,38 @@
     }
   }
 
+  .option-selector {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  
+    label {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+      cursor: pointer;
+      position: relative;
+      transition: color 0.3s;
+      color: $color-darkGrey;
+  
+      input[type="radio"] {
+        display: none;
+      }
+  
+      &.selected {
+        color: $color-orangeSite;
+        font-size: 18px;
+        font-weight: bold;
+      }
+  
+      &:hover {
+        color: $color-orangeSite;
+      }
+    }
+  }
+
   .form-button {
     background-color: $color-salmon;
     color: white;
@@ -89,15 +101,4 @@
     font-size: 16px;
     border-radius: 5px;
   }
-}
-
-.hidden {
-  opacity: 0;
-  transform: translateY(50px);
-}
-
-.fade-in {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.5s ease, transform 0.5s ease;
 }
