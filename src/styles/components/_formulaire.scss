@@ -7,11 +7,10 @@
   background-color: #f9f9f9;
   width: 90%;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
-  transition: height 0.5s ease; /* Ajout de la transition pour la hauteur */
 
   &.hidden {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(30px);
   }
 
   &.fade-in {
