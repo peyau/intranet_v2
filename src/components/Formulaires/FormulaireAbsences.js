@@ -1,98 +1,107 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
 const FormulaireAbsences = () => {
   const [showForm, setShowForm] = useState(false);
-  const [absenceType, setAbsenceType] = useState("conge");
-  const [absenceDate, setAbsenceDate] = useState("");
-  const [absenceDuration, setAbsenceDuration] = useState("full-day");
-  const [startTime, setStartTime] = useState("");
-  const [startDate, setStartDate] = useState("");
-  const [endDate, setEndDate] = useState("");
+  const [selectedOption, setSelectedOption] = useState('self');
+  const [absentName, setAbsentName] = useState('');
+  const [absenceType, setAbsenceType] = useState('');
+  const [startDate, setStartDate] = useState('');
+  const [endDate, setEndDate] = useState('');
+  const [startTime, setStartTime] = useState('');
 
   useEffect(() => {
     setShowForm(true); // Montrer le formulaire une fois que le composant est monté
   }, []);
 
+  const handleOptionChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
+
   const handleFormSubmit = (event) => {
     event.preventDefault();
     // Gérer la soumission du formulaire ici
   };
-
+  
   return (
     <div className={`form-container ${showForm ? "fade-in" : "hidden"}`}>
-      <form className="generic-form" onSubmit={handleFormSubmit}>
-        <label htmlFor="absence-type">Type d'absence :</label>
-        <select
-          id="absence-type"
-          className="generic-select"
-          value={absenceType}
-          onChange={(e) => setAbsenceType(e.target.value)}
-        >
-          <option value="conge">Congé</option>
-          <option value="conge-social">Congé Social</option>
-          <option value="maladie">Maladie</option>
-        </select>
-        <label htmlFor="absence-date">Date d'absence :</label>
-        <input
-          type="date"
-          id="absence-date"
-          className="generic-input"
-          value={absenceDate}
-          onChange={(e) => setAbsenceDate(e.target.value)}
-          required
-        />
-        <label htmlFor="absence-duration">Durée :</label>
-        <select
-          id="absence-duration"
-          className="generic-select"
-          value={absenceDuration}
-          onChange={(e) => setAbsenceDuration(e.target.value)}
-        >
-          <option value="half-day">Demi-journée</option>
-          <option value="full-day">Journée complète</option>
-          <option value="multiple-days">Plusieurs jours</option>
-        </select>
-        {absenceDuration === "half-day" && (
-          <div className="time-input-container">
-            <label htmlFor="absence-start-time">Heure de début :</label>
+      <form onSubmit={handleFormSubmit}>
+        <div className="option-selector">
+          <label
+            className={selectedOption === 'self' ? 'selected' : ''}
+            onClick={() => setSelectedOption('self')}
+          >
             <input
-              type="time"
-              id="absence-start-time"
-              className="generic-input"
-              value={startTime}
-              onChange={(e) => setStartTime(e.target.value)}
+              type="radio"
+              value="self"
+              checked={selectedOption === 'self'}
+              onChange={handleOptionChange}
+            />
+            Encoder une absence pour moi
+          </label>
+          <label
+            className={selectedOption === 'colleague' ? 'selected' : ''}
+            onClick={() => setSelectedOption('colleague')}
+          >
+            <input
+              type="radio"
+              value="colleague"
+              checked={selectedOption === 'colleague'}
+              onChange={handleOptionChange}
+            />
+            Encoder une absence pour un collègue
+          </label>
+        </div>
+        {selectedOption === 'colleague' && (
+          <div className="input-field">
+            <label>Nom de l'absent:</label>
+            <input
+              type="text"
+              value={absentName}
+              onChange={(e) => setAbsentName(e.target.value)}
             />
           </div>
         )}
-        <div className="date-input-container">
-          <label htmlFor="absence-start-date">Date de début :</label>
-          <input
-            type="date"
-            id="absence-start-date"
-            className="generic-input"
-            value={startDate}
-            onChange={(e) => setStartDate(e.target.value)}
-            required
-          />
+        <div className="input-field">
+          <label>Type d'absence:</label>
+          <select
+            value={absenceType}
+            onChange={(e) => setAbsenceType(e.target.value)}
+          >
+            <option value="">Sélectionner le type</option>
+            <option value="conge">Congé</option>
+            <option value="conge_social">Congé social</option>
+            <option value="maladie">Maladie</option>
+          </select>
         </div>
-        {absenceDuration === "multiple-days" && (
-          <div className="date-input-container">
-            <label htmlFor="absence-end-date">Date de fin :</label>
+        <div className="date-fields">
+          <div className="input-field">
+            <label>Date de début:</label>
             <input
               type="date"
-              id="absence-end-date"
-              className="generic-input"
+              value={startDate}
+              onChange={(e) => setStartDate(e.target.value)}
+            />
+          </div>
+          <div className="input-field">
+            <label>Date de fin:</label>
+            <input
+              type="date"
               value={endDate}
               onChange={(e) => setEndDate(e.target.value)}
             />
           </div>
-        )}
-
-        <button type="submit" className="form-button">
-          Soumettre
-        </button>
+        </div>
+        <div className="input-field">
+          <label>Description:</label>
+          <input
+            type="text"
+            value={startTime}
+            onChange={(e) => setStartTime(e.target.value)}
+          />
+        </div>
+        <button className="form-button">Enregistrer</button>
       </form>
-    </div>
+      </div>
   );
 };
 

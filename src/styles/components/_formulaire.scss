@@ -1,76 +1,84 @@
-/* FormulaireAbsences.css */
 .form-container {
-    text-align: center;
-    margin: 2rem auto;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    width: 80%;
-    max-width: 600px;
-    background-color: #f9f9f9;
-    box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .hidden {
-    opacity: 0;
-    transform: translateY(50px);
-  }
+  text-align: center;
+  margin: 2rem auto;
+  padding: 2% 10%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  width: 90%;
+  box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.1);
 
-  .fade-in {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-  }
-
-  .form-content {
-    width: 100%;
-    max-width: 600px;
-  }
-  
-  .form-title {
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-    text-align: left; /* Aligner le texte à gauche */
-  }
-  
-  .generic-form {
+  .option-selector {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-    width: 100%;
-  }
+    justify-content: center;
+    margin-bottom: 30px;
   
-  .generic-input-container {
-    width: 100%;
-    display: flex; /* Ajouter un affichage en ligne */
-    flex-direction: column; /* Afficher les éléments en colonne */
-    align-items: flex-start; /* Aligner les éléments à gauche */
-  }
+    label {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+      cursor: pointer;
+      position: relative;
+      transition: color 0.3s;
+      color: $color-darkGrey;
   
-  .generic-select,
-  .generic-input {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+      input[type="radio"] {
+        display: none;
+      }
+  
+      &.selected {
+        color: $color-orangeSite;
+        font-size: 18px;
+        font-weight: bold;
+      }
+  
+      &:hover {
+        color: $color-orangeSite;
+      }
+    }
   }
 
-  .time-input-container,
-  .date-input-container {
-    display: none;
+  .date-fields {
+    display: flex;
+
+    .input-field {
+      flex: 1;
+      margin-right: 10px;
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      input {
+        width: 100%;
+      }
+    }
   }
-  
-  /* Styles conditionnels pour les champs de temps et de date */
-  .generic-select[value="half-day"] ~ .time-input-container,
-  .generic-select[value="multiple-days"] ~ .date-input-container {
-    display: block;
-  }
-  
-  .generic-select:focus,
-  .generic-input:focus {
-    outline: 2px solid #007bff;
+
+  .input-field {
+    margin-bottom: 50px;
+    
+    label {
+      color: $color-darkGrey;
+      display: block;
+      margin-bottom: 5px;
+    }
+    
+    input,
+    select {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-bottom: 2px solid rgba($color-orange, 0.5);
+      background-color: transparent;
+      transition: border-color 0.3s ease;
+      
+      &:focus {
+        outline: none;
+        border-color: $color-orange;
+      }
+    }
   }
 
   .form-button {
@@ -79,6 +87,17 @@
     border: none;
     padding: 10px 20px;
     font-size: 16px;
-    cursor: pointer;
     border-radius: 5px;
   }
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
