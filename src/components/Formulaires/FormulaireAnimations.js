@@ -140,6 +140,7 @@ const FormulaireAnimations = () => {
                       <button
                         type="button"
                         onClick={() => handleParticipantRemove(participant)}
+                        className="delete-button"
                       >
                         &#10006;
                       </button>
@@ -213,6 +214,7 @@ const FormulaireAnimations = () => {
                       <button
                         type="button"
                         onClick={() => handleEquipmentRemove(equipment)}
+                        className="delete-button"
                       >
                         &#10006;
                       </button>
