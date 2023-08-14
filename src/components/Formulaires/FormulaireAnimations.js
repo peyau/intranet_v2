@@ -22,8 +22,13 @@ const FormulaireAnimations = () => {
   });
 
   const participantsList = ["Participant 1", "Participant 2", "Participant 3"];
-  const roomsList = ["Salle 1", "Salle 2", "Salle 3"];
-  const equipmentList = ["Matériel 1", "Matériel 2", "Matériel 3"];
+  const roomsList = [
+    "Niche créative",
+    "Salle animation",
+    "Section jeunesse",
+    "Bibliothèque Dottignies",
+  ];
+  const equipmentList = ["Caméra", "Appareil photo", "Berlingo"];
 
   useEffect(() => {
     setShowForm(true);
@@ -111,58 +116,61 @@ const FormulaireAnimations = () => {
                 }
               />
             </div>
-            <div className="input-field">
-              <label>Participants</label>
-              <select
-                value={animationData.selectedParticipant}
-                onChange={handleParticipantAdd}
-              >
-                <option value="">Sélectionner un participant</option>
-                {participantsList.map(
-                  (participant) =>
-                    !animationData.participants.includes(participant) && (
-                      <option key={participant} value={participant}>
-                        {participant}
-                      </option>
-                    )
-                )}
-              </select>
-              <ul>
-                {animationData.participants.map((participant) => (
-                  <li key={participant}>
-                    {participant}
-                    <button
-                      type="button"
-                      onClick={() => handleParticipantRemove(participant)}
-                      className="delete-button"
-                    >
-                      &#10006;
-                    </button>
-                  </li>
-                ))}
-              </ul>
+            <div className="date-fields">
+              <div className="input-field">
+                <label>Participants</label>
+                <select
+                  value={animationData.selectedParticipant}
+                  onChange={handleParticipantAdd}
+                >
+                  <option value="">Sélectionner un participant</option>
+                  {participantsList.map(
+                    (participant) =>
+                      !animationData.participants.includes(participant) && (
+                        <option key={participant} value={participant}>
+                          {participant}
+                        </option>
+                      )
+                  )}
+                </select>
+                <ul>
+                  {animationData.participants.map((participant) => (
+                    <li key={participant}>
+                      {participant}
+                      <button
+                        type="button"
+                        onClick={() => handleParticipantRemove(participant)}
+                        className="delete-button"
+                      >
+                        &#10006;
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="input-field">
+                <label>Dates</label>
+                <input
+                  type="date"
+                  onChange={(e) => handleAddDate(e.target.value)}
+                />
+                <ul className="added-list">
+                  {dates.map((date, index) => (
+                    <li key={index}>
+                      {date}
+                      <button
+                        className="remove-button"
+                        onClick={() => handleRemoveDate(date)}
+                      >
+                        &#10006;
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
 
-            <div className="input-field">
-              <label>Dates</label>
-              <input
-                type="date"
-                onChange={(e) => handleAddDate(e.target.value)}
-              />
-              <ul className="added-list">
-                {dates.map((date, index) => (
-                  <li key={index}>
-                    {date}
-                    <button
-                      className="remove-button"
-                      onClick={() => handleRemoveDate(date)}
-                    >
-                      &#10006;
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
             <div className="date-fields">
               <div className="input-field">
                 <label>Salle</label>
