@@ -107,6 +107,7 @@
   list-style: none;
   padding: 0;
   margin-top: 20px;
+  margin-bottom: -20px;
 }
 
 .input-field ul li {
@@ -119,7 +120,7 @@
   margin-left: 5px;
   background-color: transparent;
   border: none;
-  color: red;
+  color: $color-orange;
   cursor: pointer;
 }
 
