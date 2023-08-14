@@ -12,11 +12,14 @@ $white: rgb(243, 243, 243);
   box-sizing: border-box;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 body {
   background: $white;
   font-family: $font-1;
   color: $color-darkGrey;
-  // @include verticalCenter;
 }
 
 h1 {

@@ -1,7 +1,7 @@
 .calendar-fixed {
     position: fixed;
     top: 250px;
-    right: 2%;
+    right: 1%;
     width: 300px;
     height: 100vh;
   }
@@ -68,7 +68,7 @@
 }
 
 .react-calendar__navigation__arrow {
-    color: $color-orangeSite;
+  color: $color-orangeSite;
 }
 
 .react-calendar__navigation button:disabled {
