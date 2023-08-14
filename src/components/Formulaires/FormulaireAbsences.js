@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 const FormulaireAbsences = () => {
   const [showForm, setShowForm] = useState(false);
-  const [selectedOption, setSelectedOption] = useState('self');
-  const [absentName, setAbsentName] = useState('');
-  const [absenceType, setAbsenceType] = useState('');
-  const [startDate, setStartDate] = useState('');
-  const [endDate, setEndDate] = useState('');
-  const [startTime, setStartTime] = useState('');
+  const [selectedOption, setSelectedOption] = useState("self");
+  const [absentName, setAbsentName] = useState("");
+  const [absenceType, setAbsenceType] = useState("");
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
+  const [startTime, setStartTime] = useState("");
 
   useEffect(() => {
-    setShowForm(true); // Montrer le formulaire une fois que le composant est monté
+    setShowForm(true);
   }, []);
 
   const handleOptionChange = (event) => {
@@ -21,37 +21,37 @@ const FormulaireAbsences = () => {
     event.preventDefault();
     // Gérer la soumission du formulaire ici
   };
-  
+
   return (
     <div className={`form-container ${showForm ? "fade-in" : "hidden"}`}>
       <form onSubmit={handleFormSubmit}>
         <div className="option-selector">
           <label
-            className={selectedOption === 'self' ? 'selected' : ''}
-            onClick={() => setSelectedOption('self')}
+            className={selectedOption === "self" ? "selected" : ""}
+            onClick={() => setSelectedOption("self")}
           >
             <input
               type="radio"
               value="self"
-              checked={selectedOption === 'self'}
+              checked={selectedOption === "self"}
               onChange={handleOptionChange}
             />
             Encoder une absence pour moi
           </label>
           <label
-            className={selectedOption === 'colleague' ? 'selected' : ''}
-            onClick={() => setSelectedOption('colleague')}
+            className={selectedOption === "colleague" ? "selected" : ""}
+            onClick={() => setSelectedOption("colleague")}
           >
             <input
               type="radio"
               value="colleague"
-              checked={selectedOption === 'colleague'}
+              checked={selectedOption === "colleague"}
               onChange={handleOptionChange}
             />
             Encoder une absence pour un collègue
           </label>
         </div>
-        {selectedOption === 'colleague' && (
+        {selectedOption === "colleague" && (
           <div className="input-field">
             <label>Nom de l'absent:</label>
             <input
@@ -101,7 +101,7 @@ const FormulaireAbsences = () => {
         </div>
         <button className="form-button">Enregistrer</button>
       </form>
-      </div>
+    </div>
   );
 };
 
