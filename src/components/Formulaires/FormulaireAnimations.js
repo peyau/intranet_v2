@@ -64,6 +64,27 @@ const FormulaireAnimations = () => {
     setDates(updatedDates);
   };
 
+  const handleEquipmentAdd = (e) => {
+    const selectedEquipment = e.target.value;
+    if (selectedEquipment) {
+      setAnimationData({
+        ...animationData,
+        equipment: [...animationData.equipment, selectedEquipment],
+        selectedEquipment: "", // Réinitialise l'équipement sélectionné
+      });
+    }
+  };
+
+  const handleEquipmentRemove = (equipment) => {
+    const updatedEquipment = animationData.equipment.filter(
+      (item) => item !== equipment
+    );
+    setAnimationData({
+      ...animationData,
+      equipment: updatedEquipment,
+    });
+  };
+
   return (
     <div className={`form-container ${showForm ? "fade-in" : "hidden"}`}>
       <form onSubmit={handleFormSubmit}>
@@ -99,7 +120,6 @@ const FormulaireAnimations = () => {
                 <option value="">Sélectionner un participant</option>
                 {participantsList.map(
                   (participant) =>
-                    // Exclure le participant s'il a déjà été ajouté
                     !animationData.participants.includes(participant) && (
                       <option key={participant} value={participant}>
                         {participant}
@@ -142,6 +162,58 @@ const FormulaireAnimations = () => {
                   </li>
                 ))}
               </ul>
+            </div>
+            <div className="date-fields">
+              <div className="input-field">
+                <label>Salle</label>
+                <select
+                  value={animationData.selectedRoom}
+                  onChange={(e) =>
+                    setAnimationData({
+                      ...animationData,
+                      selectedRoom: e.target.value,
+                    })
+                  }
+                >
+                  <option value="">Sélectionner une salle</option>
+                  {roomsList.map((room) => (
+                    <option key={room} value={room}>
+                      {room}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className="input-field">
+                <label>Réservation matériel</label>
+                <select
+                  value={animationData.selectedEquipment}
+                  onChange={handleEquipmentAdd}
+                >
+                  <option value="">Sélectionner un matériel</option>
+                  {equipmentList.map(
+                    (equipment) =>
+                      !animationData.equipment.includes(equipment) && ( // Exclure l'équipement s'il a déjà été ajouté
+                        <option key={equipment} value={equipment}>
+                          {equipment}
+                        </option>
+                      )
+                  )}
+                </select>
+                <ul>
+                  {animationData.equipment.map((equipment) => (
+                    <li key={equipment}>
+                      {equipment}
+                      <button
+                        type="button"
+                        onClick={() => handleEquipmentRemove(equipment)}
+                        className="delete-button"
+                      >
+                        &#10006;
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
 
             <button className="form-button" type="submit">
