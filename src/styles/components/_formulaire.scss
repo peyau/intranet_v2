@@ -42,6 +42,7 @@
       color: $color-darkGrey;
       display: block;
       margin-bottom: 5px;
+      font-size: larger;
     }
     
     input,
@@ -100,4 +101,36 @@
     font-size: 16px;
     border-radius: 5px;
   }
+}
+
+.input-field ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.input-field ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.input-field ul li button {
+  margin-left: 5px;
+  background-color: transparent;
+  border: none;
+  color: red;
+  cursor: pointer;
+}
+
+/* Styles pour le bouton "Supprimer" */
+.form-button[type="button"] {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: 10px;
 }
