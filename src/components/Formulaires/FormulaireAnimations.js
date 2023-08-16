@@ -160,7 +160,7 @@ const FormulaireAnimations = () => {
                     <li key={index}>
                       {date}
                       <button
-                        className="remove-button"
+                        className="delete-button"
                         onClick={() => handleRemoveDate(date)}
                       >
                         &#10006;
