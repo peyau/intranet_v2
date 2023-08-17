@@ -33,7 +33,6 @@ h1 {
 h2 {
   font-size: 1.3rem; /* Taille de police */
   color: $color-darkGrey; /* Couleur du texte */
-  margin-top: 20px; /* Ajouter de l'espace en dessous du titre */
   font-weight: 500;
 }
 
@@ -50,6 +49,28 @@ h1::after {
 .container {
   width: 60%;
   margin: 0 auto;
+}
+
+.sub-container {
+  text-align: center;
+  margin: 2rem auto;
+  padding: 2% 10%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  width: 100%;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+  
+  &.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  &.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
 }
 
 input,
