@@ -14,34 +14,37 @@ import NumerosTelephone from "./pages/InfosPratiques/NumerosTelephone";
 import Protocoles from "./pages/InfosPratiques/Protocoles";
 import FAQ from "./pages/InfosPratiques/FAQ";
 import Calendrier from "./components/Calendrier";
+import { DateProvider } from "./components/DateContext";
 
 const App = () => {
   return (
     <Router>
-      <div className="container">
-        <Routes>
-          <Route path="/*" element={<Accueil />} />
-          <Route path="/encodage" element={<Encodage />} />
-          <Route path="/encodage/animations" element={<Animations />} />
-          <Route path="/encodage/absences" element={<Absences />} />
-          <Route path="/encodage/reservations" element={<Reservations />} />
-          <Route path="/infospratiques" element={<InfosPratiques />} />
-          <Route path="/infospratiques/equipe" element={<Equipe />} />
-          <Route path="/infospratiques/horaires" element={<Horaires />} />
-          <Route
-            path="/infospratiques/numeros"
-            element={<NumerosTelephone />}
-          />
-          <Route path="/infospratiques/protocoles" element={<Protocoles />} />
-          <Route path="/infospratiques/FAQ" element={<FAQ />} />
-          <Route path="/perso" element={<PagePerso />} />
+      <DateProvider>
+        <div className="container">
+          <Routes>
+            <Route path="/*" element={<Accueil />} />
+            <Route path="/encodage" element={<Encodage />} />
+            <Route path="/encodage/animations" element={<Animations />} />
+            <Route path="/encodage/absences" element={<Absences />} />
+            <Route path="/encodage/reservations" element={<Reservations />} />
+            <Route path="/infospratiques" element={<InfosPratiques />} />
+            <Route path="/infospratiques/equipe" element={<Equipe />} />
+            <Route path="/infospratiques/horaires" element={<Horaires />} />
+            <Route
+              path="/infospratiques/numeros"
+              element={<NumerosTelephone />}
+            />
+            <Route path="/infospratiques/protocoles" element={<Protocoles />} />
+            <Route path="/infospratiques/FAQ" element={<FAQ />} />
+            <Route path="/perso" element={<PagePerso />} />
 
-          <Route path="*" element={<Accueil />} />
-        </Routes>
-      </div>
-      <div className="calendar-fixed">
-        <Calendrier />
-      </div>
+            <Route path="*" element={<Accueil />} />
+          </Routes>
+        </div>
+        <div className="calendar-fixed">
+          <Calendrier />
+        </div>
+      </DateProvider>
     </Router>
   );
 };
