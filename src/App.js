@@ -39,7 +39,9 @@ const App = () => {
           <Route path="*" element={<Accueil />} />
         </Routes>
       </div>
-      <div className="calendar-fixed"><Calendrier /></div>
+      <div className="calendar-fixed">
+        <Calendrier />
+      </div>
     </Router>
   );
 };
