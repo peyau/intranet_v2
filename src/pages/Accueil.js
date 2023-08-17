@@ -9,8 +9,9 @@ const Accueil = () => {
 
   const defaultDate = selectedDate || new Date(); // Utilisez la date actuelle comme valeur par défaut si selectedDate est null
 
-  // Fade in de la div
+  // Animation de la div
   const [showContainer, setShowContainer] = useState(false);
+
   useEffect(() => {
     setShowContainer(true);
   }, []);
