@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import AnimatedContainer from "../AnimatedContainer";
 
 const FormulaireReservations = () => {
-  const [showForm, setShowForm] = useState(false);
   const [materiel, setMateriel] = useState("");
   const [reservationType, setReservationType] = useState("");
   const [salle, setSalle] = useState("");
@@ -22,10 +22,6 @@ const FormulaireReservations = () => {
     { value: "materiel1", label: "Matériel 1" },
     { value: "materiel2", label: "Matériel 2" },
   ];
-
-  useEffect(() => {
-    setShowForm(true); // Montrer le formulaire une fois que le composant est monté
-  }, []);
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
@@ -80,7 +76,7 @@ const FormulaireReservations = () => {
   };
 
   return (
-    <div className={`form-container ${showForm ? "fade-in" : "hidden"}`}>
+    <AnimatedContainer containerClass="form-container">
       <form onSubmit={handleFormSubmit}>
         <div className="input-field">
           <label>Quelle réservation?</label>
@@ -111,7 +107,7 @@ const FormulaireReservations = () => {
         </div>
         <button className="form-button">Enregistrer</button>
       </form>
-    </div>
+    </AnimatedContainer>
   );
 };
 

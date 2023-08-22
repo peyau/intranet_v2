@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import AnimatedContainer from "../AnimatedContainer";
 
 const FormulaireAnimations = () => {
-  const [showForm, setShowForm] = useState(false);
   const [animation, setAnimation] = useState("");
   const [dates, setDates] = useState([]);
   const [animationData, setAnimationData] = useState({
@@ -29,10 +29,6 @@ const FormulaireAnimations = () => {
     "Bibliothèque Dottignies",
   ];
   const equipmentList = ["Caméra", "Appareil photo", "Berlingo"];
-
-  useEffect(() => {
-    setShowForm(true);
-  }, []);
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
@@ -91,7 +87,7 @@ const FormulaireAnimations = () => {
   };
 
   return (
-    <div className={`form-container ${showForm ? "fade-in" : "hidden"}`}>
+    <AnimatedContainer containerClass="form-container">
       <form onSubmit={handleFormSubmit}>
         <div className="input-field">
           <label>Quelle animation?</label>
@@ -230,7 +226,7 @@ const FormulaireAnimations = () => {
           </div>
         )}
       </form>
-    </div>
+    </AnimatedContainer>
   );
 };
 

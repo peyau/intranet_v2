@@ -1,17 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import AnimatedContainer from "../AnimatedContainer";
 
 const FormulaireAbsences = () => {
-  const [showForm, setShowForm] = useState(false);
   const [selectedOption, setSelectedOption] = useState("self");
   const [absentName, setAbsentName] = useState("");
   const [absenceType, setAbsenceType] = useState("");
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
   const [startTime, setStartTime] = useState("");
-
-  useEffect(() => {
-    setShowForm(true);
-  }, []);
 
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
@@ -23,7 +19,7 @@ const FormulaireAbsences = () => {
   };
 
   return (
-    <div className={`form-container ${showForm ? "fade-in" : "hidden"}`}>
+    <AnimatedContainer containerClass="form-container">
       <form onSubmit={handleFormSubmit}>
         <div className="option-selector">
           <label
@@ -101,7 +97,7 @@ const FormulaireAbsences = () => {
         </div>
         <button className="form-button">Enregistrer</button>
       </form>
-    </div>
+    </AnimatedContainer>
   );
 };
 
