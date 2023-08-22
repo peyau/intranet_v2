@@ -4,7 +4,7 @@ import "react-calendar/dist/Calendar.css";
 import { useDateContext } from "./DateContext"; // Chemin à adapter
 import { useNavigate } from "react-router-dom";
 
-function Calendrier() {
+const Calendrier = () => {
   const { selectedDate, setSelectedDate } = useDateContext();
   const navigate = useNavigate();
 
@@ -22,6 +22,6 @@ function Calendrier() {
       />
     </div>
   );
-}
+};
 
 export default Calendrier;
