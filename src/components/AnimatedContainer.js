@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function AnimatedContainer({ children, containerClass }) {
+const AnimatedContainer = ({ children, containerClass }) => {
   const [showContainer, setShowContainer] = useState(false);
 
   useEffect(() => {
@@ -14,6 +14,6 @@ function AnimatedContainer({ children, containerClass }) {
       {children}
     </div>
   );
-}
+};
 
 export default AnimatedContainer;
