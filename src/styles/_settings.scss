@@ -6,6 +6,27 @@ $color-salmon: salmon;
 $color-darkGrey: #363538;
 $white: rgb(243, 243, 243);
 
+@mixin sub-container {
+  text-align: center;
+  margin: 2rem auto;
+  padding: 2% 10%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+@mixin hidden-container {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+@mixin fade-in-container {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -20,6 +41,18 @@ body {
   background: $white;
   font-family: $font-1;
   color: $color-darkGrey;
+}
+
+.sub-container {
+  @include sub-container;
+
+  &.hidden {
+    @include hidden-container;
+  }
+
+  &.fade-in {
+    @include fade-in-container;
+  }
 }
 
 h1 {
@@ -49,28 +82,6 @@ h1::after {
 .container {
   width: 60%;
   margin: 0 auto;
-}
-
-.sub-container {
-  text-align: center;
-  margin: 2rem auto;
-  padding: 2% 10%;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  width: 100%;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
-  
-  &.hidden {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  &.fade-in {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-  }
 }
 
 input,
