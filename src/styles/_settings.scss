@@ -6,7 +6,7 @@ $color-salmon: salmon;
 $color-darkGrey: #363538;
 $white: rgb(243, 243, 243);
 
-@mixin sub-container {
+@mixin animated-container($container-width: 100%) {
   text-align: center;
   margin: 2rem auto;
   padding: 2% 10%;
@@ -14,17 +14,16 @@ $white: rgb(243, 243, 243);
   border-radius: 8px;
   background-color: #f9f9f9;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
-}
-
-@mixin hidden-container {
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-@mixin fade-in-container {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  width: $container-width;
+  &.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  &.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
 }
 
 * {
@@ -44,15 +43,7 @@ body {
 }
 
 .sub-container {
-  @include sub-container;
-
-  &.hidden {
-    @include hidden-container;
-  }
-
-  &.fade-in {
-    @include fade-in-container;
-  }
+  @include animated-container;
 }
 
 h1 {
