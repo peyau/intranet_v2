@@ -24,6 +24,10 @@ const NavBarInfosPratiques = () => {
         <NavLink to="/infospratiques/FAQ">
           <li>FAQ</li>
         </NavLink>
+
+        <NavLink to="/infospratiques/retroplanning">
+          <li>Rétroplanning</li>
+        </NavLink>
       </ul>
     </div>
   );

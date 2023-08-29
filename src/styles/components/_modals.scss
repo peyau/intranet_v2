@@ -1,0 +1,69 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+  
+ .modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  user-select: none;
+}
+  
+.modal-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: $color-orange;
+}
+  
+.modal-label {
+  display: block;
+  margin-bottom: 10px;
+  color: $color-darkGrey;
+}
+  
+.modal-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+  
+.modal-button {
+  background-color: $color-salmon;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Modal Calendrier */
+
+.ReactModal__Content {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 5px;
+  max-width: 400px; /* Largeur maximale de la modal */
+  margin: 0 auto; /* Centrer la modal horizontalement */
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-height: 60vh; /* Hauteur maximale de la modal en pourcentage de la hauteur de la vue */
+  overflow-y: auto; /* Activation de la barre de défilement en cas de contenu trop long */
+  justify-content: center;
+  align-items: center;
+}
