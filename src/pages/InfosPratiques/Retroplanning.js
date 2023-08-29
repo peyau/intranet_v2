@@ -8,7 +8,7 @@ const Retroplanning = () => {
   return (
     <div>
       <NavBarGlobal />
-      <h1>Rétro planning</h1>
+      <h1>Rétroplanning</h1>
       <NavBarInfosPratiques />
       <AnimatedContainer containerClass="sub-container">
         <BigCalendrier />

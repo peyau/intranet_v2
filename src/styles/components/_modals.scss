@@ -4,14 +4,14 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+  background-color: rgba(0, 0, 0, 0.3); /* Fond semi-transparent */
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 999;
 }
   
- .modal-content {
+.modal-content {
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
@@ -62,8 +62,6 @@
   margin: 0 auto; /* Centrer la modal horizontalement */
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  max-height: 60vh; /* Hauteur maximale de la modal en pourcentage de la hauteur de la vue */
-  overflow-y: auto; /* Activation de la barre de défilement en cas de contenu trop long */
-  justify-content: center;
-  align-items: center;
+  max-height: 60vh; 
+  overflow-y: auto; 
 }
