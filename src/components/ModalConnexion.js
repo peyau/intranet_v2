@@ -1,7 +1,7 @@
 // Modal.js
 import React, { useEffect } from "react";
 
-const Modal = ({ isOpen, onClose }) => {
+const ModalConnexion = ({ isOpen, onClose }) => {
   useEffect(() => {
     const handleKeyPress = (event) => {
       if (event.keyCode === 27) {
@@ -50,4 +50,4 @@ const Modal = ({ isOpen, onClose }) => {
   );
 };
 
-export default Modal;
+export default ModalConnexion;

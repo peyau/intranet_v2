@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Modal from "./Modal";
+import ModalConnexion from "./ModalConnexion";
 
 const BoutonConnexion = () => {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -16,7 +16,7 @@ const BoutonConnexion = () => {
       <button className="login-button" onClick={handleOpenModal}>
         Se connecter
       </button>
-      <Modal isOpen={isModalOpen} onClose={handleCloseModal} />
+      <ModalConnexion isOpen={isModalOpen} onClose={handleCloseModal} />
     </div>
   );
 };

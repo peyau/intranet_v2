@@ -7,6 +7,7 @@ function ModalCalendrier({ selectedEvent, onClose }) {
       isOpen={selectedEvent !== null}
       onRequestClose={onClose}
       overlayClassName="modal-overlay"
+      className="custom-modal"
     >
       {selectedEvent && (
         <div>

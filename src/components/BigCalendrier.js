@@ -19,20 +19,20 @@ const getEventColor = (title) => {
 
 const events = [
   {
-    start: new Date(2023, 7, 30),
-    end: new Date(2023, 7, 30),
+    start: new Date(2023, 7, 30, 10),
+    end: new Date(2023, 7, 30, 12),
     title: "Lecture au parc",
     info: "Information concernant l'événement 1",
   },
   {
-    start: new Date(),
-    end: new Date(),
-    title: "Jeux vidéos",
-    info: "Information concernant l'événement 2",
+    start: new Date(2023, 7, 30, 10),
+    end: new Date(2023, 7, 30, 12),
+    title: "Autre event",
+    info: "Information de l'autre event",
   },
   {
-    start: new Date(),
-    end: new Date(new Date().getTime() + 3 * 24 * 60 * 60 * 1000),
+    start: new Date(2023, 7, 30, 10),
+    end: new Date(2023, 7, 31, 12),
     title: "Stage de code",
     info: "Lien vers l'animation ou event avec les infos",
   },
@@ -55,7 +55,6 @@ function BigCalendrier() {
     const style = {
       backgroundColor,
       borderRadius: "5px",
-      opacity: 0.8,
       color: "white",
       border: "0px",
       display: "block",
@@ -64,7 +63,7 @@ function BigCalendrier() {
   };
 
   return (
-    <div style={{ height: "500px" }}>
+    <div style={{ height: "850px" }}>
       <Calendar
         localizer={localizer}
         events={events}
@@ -72,6 +71,7 @@ function BigCalendrier() {
         endAccessor="end"
         eventPropGetter={eventStyleGetter}
         onSelectEvent={handleEventClick}
+        showMultiDayTimes={true}
       />
 
       <ModalCalendrier
