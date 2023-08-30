@@ -8,6 +8,7 @@ function ModalCalendrier({ selectedEvent, onClose }) {
       onRequestClose={onClose}
       overlayClassName="modal-overlay"
       className="custom-modal"
+      ariaHideApp={false}
     >
       {selectedEvent && (
         <div>
