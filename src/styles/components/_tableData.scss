@@ -1,25 +1,24 @@
-.phone-table {
-  width: 40%;
+.table-data {
+  width: 100%;
   margin: 0 auto;
   border-collapse: collapse;
 }
 
-.phone-table th, .phone-table td {
-  width: 20%; /* 20% pour chaque colonne, assurez-vous d'ajuster en conséquence */
+.table-data th, .table-data td {
   padding: 10px;
   text-align: center;
 }
 
-.phone-table th {
+.table-data th {
   background-color: $color-darkGrey; /* Couleur de fond personnalisée pour les éléments th */
   color: #FFF; /* Couleur du texte dans les éléments th */
 }
 
-.phone-table td {
+.table-data td {
   height: 50px; /* Hauteur fixe pour les lignes, ajustez selon vos besoins */
   border-bottom: 1px solid #000;
 }
 
-.phone-table tr:last-child td {
+.table-data tr:last-child td {
   border-bottom: none;
 }
