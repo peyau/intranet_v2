@@ -54,9 +54,13 @@ const NumerosTelephone = () => {
           </label>
         </div>
 
-        {selectedOption === "interne" && <TableData data={dataInterne} />}
+        {selectedOption === "interne" && (
+          <TableData data={dataInterne} className="table-data-small" />
+        )}
 
-        {selectedOption === "externe" && <TableData data={dataExterne} />}
+        {selectedOption === "externe" && (
+          <TableData data={dataExterne} className="table-data-small" />
+        )}
       </AnimatedContainer>
     </div>
   );

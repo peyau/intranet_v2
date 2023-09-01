@@ -1,6 +1,6 @@
 import React from "react";
 
-const TableNumerosTelephone = ({ data }) => {
+const TableData = ({ data, className }) => {
   if (!data || data.length === 0) {
     return <p>Aucune donnée à afficher.</p>;
   }
@@ -8,7 +8,7 @@ const TableNumerosTelephone = ({ data }) => {
   const columns = Object.keys(data[0]);
 
   return (
-    <table className="table-data">
+    <table className={`${className}`}>
       <thead>
         <tr>
           {columns.map((column, index) => (
@@ -33,4 +33,4 @@ const TableNumerosTelephone = ({ data }) => {
   );
 };
 
-export default TableNumerosTelephone;
+export default TableData;

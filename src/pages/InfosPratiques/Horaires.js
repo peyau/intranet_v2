@@ -33,7 +33,7 @@ const Horaires = () => {
       <NavBarInfosPratiques />
       <AnimatedContainer containerClass="sub-container">
         <h2>L'horaire de l'équipe</h2>
-        <TableData data={horaire} />
+        <TableData data={horaire} className="table-data" />
       </AnimatedContainer>
     </div>
   );
