@@ -43,38 +43,6 @@
     }
   }
 
-  .option-selector {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-  
-    label {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 8px;
-      cursor: pointer;
-      position: relative;
-      transition: color 0.3s;
-      color: $color-darkGrey;
-  
-      input[type="radio"] {
-        display: none;
-      }
-  
-      &.selected {
-        color: $color-orangeSite;
-        font-size: 18px;
-        font-weight: bold;
-      }
-  
-      &:hover {
-        color: $color-orangeSite;
-      }
-    }
-  }
-
   .form-button {
     background-color: $color-salmon;
     color: white;

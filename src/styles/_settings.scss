@@ -58,6 +58,7 @@ h2 {
   font-size: 1.3rem; /* Taille de police */
   color: $color-darkGrey; /* Couleur du texte */
   font-weight: 500;
+  margin-bottom: 20px; /* Ajouter de l'espace en dessous du titre */
 }
 
 h1::after {
@@ -95,4 +96,37 @@ button {
 
 button:hover {
   filter:brightness(90%)
+}
+
+/* Pour les pages "Numéros" et "Absences" */
+.radio-button-selector {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+
+  label {
+    flex: 0.4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s;
+    color: $color-darkGrey;
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    &.selected {
+      color: $color-orangeSite;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    &:hover {
+      color: $color-orangeSite;
+    }
+  }
 }
