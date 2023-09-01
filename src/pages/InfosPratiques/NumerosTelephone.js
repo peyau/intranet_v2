@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import NavBarGlobal from "../../components/navbars/NavBarGlobal";
 import NavBarInfosPratiques from "../../components/navbars/NavBarInfosPratiques";
 import AnimatedContainer from "../../components/AnimatedContainer";
-import TableNumerosTelephone from "../../components/numerosTelephone/TableNumerosTelephone";
+import TableData from "../../components/TableData";
 
 const NumerosTelephone = () => {
   const [selectedOption, setSelectedOption] = useState("interne");
@@ -54,13 +54,9 @@ const NumerosTelephone = () => {
           </label>
         </div>
 
-        {selectedOption === "interne" && (
-          <TableNumerosTelephone data={dataInterne} />
-        )}
+        {selectedOption === "interne" && <TableData data={dataInterne} />}
 
-        {selectedOption === "externe" && (
-          <TableNumerosTelephone data={dataExterne} />
-        )}
+        {selectedOption === "externe" && <TableData data={dataExterne} />}
       </AnimatedContainer>
     </div>
   );
