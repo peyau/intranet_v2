@@ -1,5 +1,5 @@
 import React from "react";
-import NavBarGlobal from "../components/NavBarGlobal";
+import NavBarGlobal from "../components/navbars/NavBarGlobal";
 
 const PagePerso = () => {
   return (

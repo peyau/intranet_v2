@@ -2,20 +2,20 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Accueil from "./pages/Accueil";
-import Encodage from "./pages/Encodage/Encodage";
-import InfosPratiques from "./pages//InfosPratiques/InfosPratiques";
+import Encodage from "./pages/encodage/Encodage";
+import InfosPratiques from "./pages/infosPratiques/InfosPratiques";
 import PagePerso from "./pages/PagePerso";
-import Animations from "./pages/Encodage/Animations";
-import Reservations from "./pages/Encodage/Reservations";
-import Absences from "./pages/Encodage/Absences";
-import Equipe from "./pages/InfosPratiques/Equipe";
-import Horaires from "./pages/InfosPratiques/Horaires";
-import NumerosTelephone from "./pages/InfosPratiques/NumerosTelephone";
-import Protocoles from "./pages/InfosPratiques/Protocoles";
-import FAQ from "./pages/InfosPratiques/FAQ";
-import Retroplanning from "./pages/InfosPratiques/Retroplanning";
-import Calendrier from "./components/Calendrier";
-import { DateProvider } from "./components/DateContext";
+import Animations from "./pages/encodage/Animations";
+import Reservations from "./pages/encodage/Reservations";
+import Absences from "./pages/encodage/Absences";
+import Equipe from "./pages/infosPratiques/Equipe";
+import Horaires from "./pages/infosPratiques/Horaires";
+import NumerosTelephone from "./pages/infosPratiques/NumerosTelephone";
+import Protocoles from "./pages/infosPratiques/Protocoles";
+import FAQ from "./pages/infosPratiques/FAQ";
+import Retroplanning from "./pages/infosPratiques/Retroplanning";
+import Calendrier from "./components/calendriers/Calendrier";
+import { DateProvider } from "./components/calendriers/DateContext";
 
 const App = () => {
   return (

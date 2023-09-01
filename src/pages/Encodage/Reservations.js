@@ -1,7 +1,7 @@
 import React from "react";
-import NavBarGlobal from "../../components/NavBarGlobal";
-import NavBarEncodage from "../../components/NavBarEncodage";
-import FormulaireReservation from "../../components/Formulaires/FormulaireReservations";
+import NavBarGlobal from "../../components/navbars/NavBarGlobal";
+import NavBarEncodage from "../../components/navbars/NavBarEncodage";
+import FormulaireReservation from "../../components/formulaires/FormulaireReservations";
 
 const Reservations = () => {
   return (

@@ -3,7 +3,7 @@ import { Calendar, momentLocalizer } from "react-big-calendar";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import moment from "moment";
 import "moment/locale/fr";
-import ModalCalendrier from "./ModalCalendrier"; // Assure-toi de corriger le chemin d'accès si nécessaire
+import ModalCalendrier from "../modals/ModalCalendrier"; // Assure-toi de corriger le chemin d'accès si nécessaire
 
 const localizer = momentLocalizer(moment);
 

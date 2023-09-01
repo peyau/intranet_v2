@@ -1,7 +1,7 @@
 import React from "react";
-import NavBarGlobal from "../../components/NavBarGlobal";
-import BigCalendrier from "../../components/BigCalendrier";
-import NavBarInfosPratiques from "../../components/NavBarInfosPratiques";
+import NavBarGlobal from "../../components/navbars/NavBarGlobal";
+import NavBarInfosPratiques from "../../components/navbars/NavBarInfosPratiques";
+import BigCalendrier from "../../components/calendriers/BigCalendrier";
 import AnimatedContainer from "../../components/AnimatedContainer";
 
 const Retroplanning = () => {

@@ -1,6 +1,6 @@
 import React from "react";
-import NavBarGlobal from "../../components/NavBarGlobal";
-import NavBarInfosPratiques from "../../components/NavBarInfosPratiques";
+import NavBarGlobal from "../../components/navbars/NavBarGlobal";
+import NavBarInfosPratiques from "../../components/navbars/NavBarInfosPratiques";
 import AnimatedContainer from "../../components/AnimatedContainer";
 
 const FAQ = () => {

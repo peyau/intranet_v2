@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { format } from "date-fns";
-import NavBarGlobal from "../components/NavBarGlobal";
-import { useDateContext } from "../components/DateContext";
+import NavBarGlobal from "../components/navbars/NavBarGlobal";
+import { useDateContext } from "../components/calendriers/DateContext";
 import AnimatedContainer from "../components/AnimatedContainer";
 
 const Accueil = () => {

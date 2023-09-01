@@ -1,10 +1,19 @@
 @import "./settings";
-@import "./components/navbar";
-@import "./components/navbarSecondaire";
-@import "./components/modals";
-@import "./components/titreEtLogo";
-@import "./components/navbarGlobal";
-@import "./components/boutonConnexion";
-@import "./components/calendrier";
+
+@import "./components/calendriers/calendrier";
+
+@import "./components/formulaires/formulaire";
+
+@import "./components/navbars/navbar";
+@import "./components/navbars/navbarSecondaire";
+@import "./components/navbars/navbarGlobal";
+@import "./components/navbars/titreEtLogo";
+@import "./components/modals/boutonConnexion";
+
+@import "./components/modals/modals";
+@import "./components/modals/modalCalendrier";
 /* @import "react-calendar/dist/Calendar.css";  ---  Uniquement pour avoir le lien vers le fichier CSS de base */ 
-@import "./components/formulaire";
+
+
+
+

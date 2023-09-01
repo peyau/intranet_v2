@@ -51,17 +51,3 @@
   cursor: pointer;
   border-radius: 5px;
 }
-
-/* Modal Calendrier */
-
-.custom-modal.ReactModal__Content {
-  position: absolute;
-  background-color: #fff;
-  border-radius: 5px;
-  max-width: 400px; /* Largeur maximale de la modal */
-  margin: 0 auto; /* Centrer la modal horizontalement */
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  max-height: 60vh; 
-  overflow-y: auto; 
-}

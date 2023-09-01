@@ -1,7 +1,7 @@
 import React from "react";
-import NavBarGlobal from "../../components/NavBarGlobal";
-import NavBarEncodage from "../../components/NavBarEncodage";
-import FormulaireAnimations from "../../components/Formulaires/FormulaireAnimations";
+import NavBarGlobal from "../../components/navbars/NavBarGlobal";
+import NavBarEncodage from "../../components/navbars/NavBarEncodage";
+import FormulaireAnimations from "../../components/formulaires/FormulaireAnimations";
 
 const Animations = () => {
   return (
