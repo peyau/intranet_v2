@@ -10,6 +10,7 @@ const Absences = () => {
       <h1>Encodage des absences</h1>
       <NavBarEncodage />
       <FormulaireAbsences />
+      test
     </div>
   );
 };

@@ -21,7 +21,7 @@ const FormulaireAbsences = () => {
   return (
     <AnimatedContainer containerClass="form-container">
       <form onSubmit={handleFormSubmit}>
-        <div className="radio-button-selector">
+        <div className="radio-button-selector">test
           <label
             className={selectedOption === "self" ? "selected" : ""}
             onClick={() => setSelectedOption("self")}

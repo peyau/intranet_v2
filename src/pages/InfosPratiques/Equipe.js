@@ -12,6 +12,7 @@ const Equipe = () => {
       <AnimatedContainer containerClass="sub-container">
         <h2>Les infos de l'équipe</h2>
       </AnimatedContainer>
+      test
     </div>
   );
 };
