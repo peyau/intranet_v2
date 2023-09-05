@@ -3,13 +3,19 @@ import NavBarGlobal from "../../components/navbars/NavBarGlobal";
 import NavBarInfosPratiques from "../../components/navbars/NavBarInfosPratiques";
 import AnimatedContainer from "../../components/AnimatedContainer";
 import TableData from "../../components/TableData";
+import RadioButtonSelector from "../../components/RadioButtonSelector";
 
 const NumerosTelephone = () => {
   const [selectedOption, setSelectedOption] = useState("interne");
 
-  const handleOptionChange = (event) => {
-    setSelectedOption(event.target.value);
+  const handleOptionChange = (value) => {
+    setSelectedOption(value);
   };
+
+  const options = [
+    { value: "interne", label: "Afficher les numéros internes" },
+    { value: "externe", label: "Afficher les numéros externes" },
+  ];
 
   const dataInterne = [
     { nom: "John Doe", numero: "12345" },
@@ -27,32 +33,11 @@ const NumerosTelephone = () => {
       <h1>Numéros de téléphone</h1>
       <NavBarInfosPratiques />
       <AnimatedContainer containerClass="sub-container">
-        <div className="radio-button-selector">
-          <label
-            className={selectedOption === "interne" ? "selected" : ""}
-            onClick={() => setSelectedOption("interne")}
-          >
-            <input
-              type="radio"
-              value="interne"
-              checked={selectedOption === "interne"}
-              onChange={handleOptionChange}
-            />
-            Afficher les numéros internes
-          </label>
-          <label
-            className={selectedOption === "externe" ? "selected" : ""}
-            onClick={() => setSelectedOption("externe")}
-          >
-            <input
-              type="radio"
-              value="externe"
-              checked={selectedOption === "externe"}
-              onChange={handleOptionChange}
-            />
-            Afficher les numéros externes
-          </label>
-        </div>
+        <RadioButtonSelector
+          options={options}
+          selectedOption={selectedOption}
+          onChange={handleOptionChange}
+        />
 
         {selectedOption === "interne" && (
           <TableData data={dataInterne} className="table-data-small" />

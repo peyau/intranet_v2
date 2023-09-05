@@ -2,6 +2,7 @@ import React from "react";
 import NavBarGlobal from "../../components/navbars/NavBarGlobal";
 import NavBarEncodage from "../../components/navbars/NavBarEncodage";
 import FormulaireReservation from "../../components/formulaires/FormulaireReservations";
+import AnimatedContainer from "../../components/AnimatedContainer";
 
 const Reservations = () => {
   return (
@@ -9,7 +10,9 @@ const Reservations = () => {
       <NavBarGlobal />
       <h1>Encodage des réservations</h1>
       <NavBarEncodage />
-      <FormulaireReservation />
+      <AnimatedContainer containerClass="form-container">
+        <FormulaireReservation />
+      </AnimatedContainer>
     </div>
   );
 };

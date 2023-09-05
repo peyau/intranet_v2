@@ -2,6 +2,7 @@ import React from "react";
 import NavBarGlobal from "../../components/navbars/NavBarGlobal";
 import NavBarEncodage from "../../components/navbars/NavBarEncodage";
 import FormulaireAbsences from "../../components/formulaires/FormulaireAbsences";
+import AnimatedContainer from "../../components/AnimatedContainer";
 
 const Absences = () => {
   return (
@@ -9,7 +10,9 @@ const Absences = () => {
       <NavBarGlobal />
       <h1>Encodage des absences</h1>
       <NavBarEncodage />
-      <FormulaireAbsences />
+      <AnimatedContainer containerClass="form-container">
+        <FormulaireAbsences />
+      </AnimatedContainer>
     </div>
   );
 };

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import AnimatedContainer from "../AnimatedContainer";
 
 const FormulaireAnimations = () => {
   const [animation, setAnimation] = useState("");
@@ -87,7 +86,6 @@ const FormulaireAnimations = () => {
   };
 
   return (
-    <AnimatedContainer containerClass="form-container">
       <form onSubmit={handleFormSubmit}>
         <div className="input-field">
           <label>Quelle animation?</label>
@@ -226,7 +224,6 @@ const FormulaireAnimations = () => {
           </div>
         )}
       </form>
-    </AnimatedContainer>
   );
 };
 

@@ -2,6 +2,7 @@ import React from "react";
 import NavBarGlobal from "../../components/navbars/NavBarGlobal";
 import NavBarEncodage from "../../components/navbars/NavBarEncodage";
 import FormulaireAnimations from "../../components/formulaires/FormulaireAnimations";
+import AnimatedContainer from "../../components/AnimatedContainer";
 
 const Animations = () => {
   return (
@@ -9,7 +10,9 @@ const Animations = () => {
       <NavBarGlobal />
       <h1>Encodage des animations</h1>
       <NavBarEncodage />
-      <FormulaireAnimations />
+      <AnimatedContainer containerClass="form-container">
+        <FormulaireAnimations />
+      </AnimatedContainer>
     </div>
   );
 };

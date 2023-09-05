@@ -1,17 +1,23 @@
 import React, { useState } from "react";
-import AnimatedContainer from "../AnimatedContainer";
+import RadioButtonSelector from "../RadioButtonSelector";
 
 const FormulaireAbsences = () => {
   const [selectedOption, setSelectedOption] = useState("self");
+
+  const handleOptionChange = (value) => {
+    setSelectedOption(value);
+  };
+
+  const options = [
+    { value: "self", label: "Encoder une absence pour moi" },
+    { value: "colleague", label: "Encoder une absence pour un collègue" },
+  ];
+
   const [absentName, setAbsentName] = useState("");
   const [absenceType, setAbsenceType] = useState("");
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
   const [startTime, setStartTime] = useState("");
-
-  const handleOptionChange = (event) => {
-    setSelectedOption(event.target.value);
-  };
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
@@ -19,34 +25,13 @@ const FormulaireAbsences = () => {
   };
 
   return (
-    <AnimatedContainer containerClass="form-container">
+    <>
+        <RadioButtonSelector
+          options={options}
+          selectedOption={selectedOption}
+          onChange={handleOptionChange}
+        />
       <form onSubmit={handleFormSubmit}>
-        <div className="radio-button-selector">
-          <label
-            className={selectedOption === "self" ? "selected" : ""}
-            onClick={() => setSelectedOption("self")}
-          >
-            <input
-              type="radio"
-              value="self"
-              checked={selectedOption === "self"}
-              onChange={handleOptionChange}
-            />
-            Encoder une absence pour moi
-          </label>
-          <label
-            className={selectedOption === "colleague" ? "selected" : ""}
-            onClick={() => setSelectedOption("colleague")}
-          >
-            <input
-              type="radio"
-              value="colleague"
-              checked={selectedOption === "colleague"}
-              onChange={handleOptionChange}
-            />
-            Encoder une absence pour un collègue
-          </label>
-        </div>
         {selectedOption === "colleague" && (
           <div className="input-field">
             <label>Nom de l'absent:</label>
@@ -97,7 +82,7 @@ const FormulaireAbsences = () => {
         </div>
         <button className="form-button">Enregistrer</button>
       </form>
-    </AnimatedContainer>
+      </>
   );
 };
 
