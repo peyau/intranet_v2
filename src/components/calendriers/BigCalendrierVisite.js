@@ -8,7 +8,7 @@ import ModalCalendrier from "../modals/ModalCalendrier"; // Assure-toi de corrig
 const localizer = momentLocalizer(moment);
 
 const getEventColor = (title) => {
-  if (title.includes("Stage")) {
+  if (title.includes("Visite")) {
     return "red";
   } else if (title.includes("Lecture")) {
     return "blue";
@@ -19,27 +19,15 @@ const getEventColor = (title) => {
 
 const events = [
   {
-    start: new Date(2023, 7, 30, 10),
-    end: new Date(2023, 7, 30, 12),
-    title: "Lecture au parc",
-    info: "Information concernant l'événement 1",
-  },
-  {
-    start: new Date(2023, 7, 30, 10),
-    end: new Date(2023, 7, 30, 12),
-    title: "Autre event",
-    info: "Information de l'autre event",
-  },
-  {
-    start: new Date(2023, 7, 30, 10),
+    start: new Date(2023, 7, 31, 10),
     end: new Date(2023, 7, 31, 12),
-    title: "Stage de code",
-    info: "Lien vers l'animation ou event avec les infos",
+    title: "Visite",
+    info: "Information concernant l'événement 1",
   },
   // ... Ajoutez d'autres événements ici
 ];
 
-function BigCalendrier() {
+function BigCalendrierVisite() {
   const [selectedEvent, setSelectedEvent] = useState(null);
 
   const handleEventClick = (event) => {
@@ -82,4 +70,4 @@ function BigCalendrier() {
   );
 }
 
-export default BigCalendrier;
+export default BigCalendrierVisite;
