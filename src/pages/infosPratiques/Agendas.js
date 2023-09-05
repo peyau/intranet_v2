@@ -7,7 +7,7 @@ import BigCalendrierVisite from "../../components/calendriers/BigCalendrierVisit
 import BigCalendrierProjet from "../../components/calendriers/BigCalendrierProjet";
 import RadioButtonSelector from "../../components/RadioButtonSelector";
 
-const Retroplanning = () => {
+const Agendas = () => {
   const [selectedOption, setSelectedOption] = useState("retro");
 
   const handleOptionChange = (value) => {
@@ -47,4 +47,4 @@ const Retroplanning = () => {
   );
 };
 
-export default Retroplanning;
+export default Agendas;

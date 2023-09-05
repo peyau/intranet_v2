@@ -13,7 +13,7 @@ import Horaires from "./pages/infosPratiques/Horaires";
 import NumerosTelephone from "./pages/infosPratiques/NumerosTelephone";
 import Protocoles from "./pages/infosPratiques/Protocoles";
 import FAQ from "./pages/infosPratiques/FAQ";
-import Retroplanning from "./pages/infosPratiques/Retroplanning";
+import Agendas from "./pages/infosPratiques/Agendas";
 import Calendrier from "./components/calendriers/Calendrier";
 import { DateProvider } from "./components/calendriers/DateContext";
 
@@ -38,8 +38,8 @@ const App = () => {
             <Route path="/infospratiques/protocoles" element={<Protocoles />} />
             <Route path="/infospratiques/FAQ" element={<FAQ />} />
             <Route
-              path="/infospratiques/retroplanning"
-              element={<Retroplanning />}
+              path="/infospratiques/agendas"
+              element={<Agendas />}
             />
             <Route path="/perso" element={<PagePerso />} />
 

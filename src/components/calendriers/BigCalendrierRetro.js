@@ -8,12 +8,12 @@ import ModalCalendrier from "../modals/ModalCalendrier"; // Assure-toi de corrig
 const localizer = momentLocalizer(moment);
 
 const getEventColor = (title) => {
-  if (title.includes("Stage")) {
-    return "red";
-  } else if (title.includes("Lecture")) {
-    return "blue";
+  if (title.includes("EPN")) {
+    return "#5DC4E5";
+  } else if (title.includes("tricot")) {
+    return "#EB5B6E";
   } else {
-    return "green";
+    return "#F9B233";
   }
 };
 
@@ -21,7 +21,7 @@ const events = [
   {
     start: new Date(2023, 7, 30, 10),
     end: new Date(2023, 7, 30, 12),
-    title: "Lecture au parc",
+    title: "Atelier tricot",
     info: "Information concernant l'événement 1",
   },
   {
@@ -33,7 +33,7 @@ const events = [
   {
     start: new Date(2023, 7, 30, 10),
     end: new Date(2023, 7, 31, 12),
-    title: "Stage de code",
+    title: "EPN - Stage de code",
     info: "Lien vers l'animation ou event avec les infos",
   },
   // ... Ajoutez d'autres événements ici
