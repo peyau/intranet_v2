@@ -1,44 +1,42 @@
-.table-data, .table-data-small {
+.table-data-schedule{
   width: 100%;
   margin: 0 auto;
   border-collapse: collapse;
 }
 
-.table-data th:first-child {
-  /* Styles spécifiques pour le premier élément th */
-  background-color: $color-orange; /* Couleur de fond personnalisée pour les éléments th */
-  color: #FFF; /* Couleur du texte dans les éléments th */
-  border-radius:10px 100px;
-}
-
-.table-data th, .table-data td,
-.table-data-small th, .table-data-small td {
+/* Style général pour th et td */
+.table-data-schedule th, .table-data-schedule td {
   padding: 10px;
   text-align: center;
 }
 
-.table-data th, .table-data-small th {
-  color: $color-darkGrey;
+/* Style pour th (sauf la première cellule) */
+.table-data-schedule th:not(:first-child) {
+  background-color: $color-orange; /* Couleur de fond personnalisée pour les éléments th */
+  color: #FFF; /* Couleur du texte dans les éléments th */
+  border-radius: 10px 100px;
 }
 
-.table-data td, .table-data-small td {
+/* Style pour la première cellule th */
+.table-data-schedule th:first-child {
+  background-color: transparent; /* Annule la couleur de fond */
+}
+
+.table-data-schedule .personne-nom {
+  vertical-align: bottom;
+  font-weight: 600;
+  height:65px;
+}
+
+.table-data-schedule td {
   height: 80px; /* Hauteur fixe pour les lignes, ajustez selon vos besoins */
 }
 
-.table-data tr:last-child td,
-.table-data-small tr:last-child td {
+.table-data-schedule tr:last-child td {
   border-bottom: none;
 }
 
-.table-data tr:nth-child(even),
-.table-data-small tr:nth-child(even) {
+.table-data-schedule .semaine2 {
   background-color: rgba($color-orange, 0.3);
 }
 
-.table-data-small {
-  width: 80%;
-}
-
-.table-data-small th, .table-data-small td {
-  width:20%;
-}
