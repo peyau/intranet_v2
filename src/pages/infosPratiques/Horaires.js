@@ -9,7 +9,7 @@ const Horaires = () => {
     {
       nom: "Personne 1",
       semaine1: {
-        lundi: "9:00 - 17:00",
+        lundi: "8h30-12h\n13h-17h",
         mardi: "9:00 - 17:00",
         mercredi: "9:00 - 17:00",
         jeudi: "9:00 - 17:00",
