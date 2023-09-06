@@ -4,6 +4,13 @@
   border-collapse: collapse;
 }
 
+.table-data th:first-child {
+  /* Styles spécifiques pour le premier élément th */
+  background-color: $color-orange; /* Couleur de fond personnalisée pour les éléments th */
+  color: #FFF; /* Couleur du texte dans les éléments th */
+  border-radius:10px 100px;
+}
+
 .table-data th, .table-data td,
 .table-data-small th, .table-data-small td {
   padding: 10px;
@@ -11,13 +18,11 @@
 }
 
 .table-data th, .table-data-small th {
-  background-color: $color-darkGrey; /* Couleur de fond personnalisée pour les éléments th */
-  color: #FFF; /* Couleur du texte dans les éléments th */
+  color: $color-darkGrey;
 }
 
 .table-data td, .table-data-small td {
-  height: 50px; /* Hauteur fixe pour les lignes, ajustez selon vos besoins */
-  border-bottom: 1px solid #000;
+  height: 80px; /* Hauteur fixe pour les lignes, ajustez selon vos besoins */
 }
 
 .table-data tr:last-child td,
@@ -25,15 +30,15 @@
   border-bottom: none;
 }
 
+.table-data tr:nth-child(even),
+.table-data-small tr:nth-child(even) {
+  background-color: rgba($color-orange, 0.3);
+}
+
 .table-data-small {
-  width: 40%;
+  width: 80%;
 }
 
 .table-data-small th, .table-data-small td {
   width:20%;
-}
-
-.table-data tr:nth-child(even),
-.table-data-small tr:nth-child(even) {
-  background-color: lightgrey;
 }

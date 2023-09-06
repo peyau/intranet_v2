@@ -1,10 +1,12 @@
 $font-1: "font-1", "Century Gothic";
 
+/* Couleur automne */
 $color-orange: #f7723d;
 $color-orangeSite: #F29425;
 $color-salmon: salmon;
 $color-darkGrey: #363538;
 $white: rgb(243, 243, 243);
+
 
 * {
   padding: 0;
@@ -112,7 +114,6 @@ button:hover {
     padding: 8px;
     cursor: pointer;
     position: relative;
-    transition: color 0.3s;
     color: $color-darkGrey;
 
     input[type="radio"] {
@@ -120,12 +121,12 @@ button:hover {
     }
 
     &.selected {
-      color: $color-orangeSite;
-      font-size: 18px;
-      font-weight: bold;
+      background-color: $color-orange; /* Couleur de fond personnalisée pour les éléments th */
+      color: #FFF; /* Couleur du texte dans les éléments th */
+      border-radius:10px 10px;
     }
 
-    &:hover {
+    &:not(.selected):hover {
       color: $color-orangeSite;
     }
   }
