@@ -23,8 +23,16 @@ const NumerosTelephone = () => {
   ];
 
   const dataExterne = [
-    { nom: "John Doe Ext", numero: "12345" },
-    { nom: "Jane Smith Ext", numero: "67890" },
+    {
+      nom: "John Doe Ext",
+      numero: "12345",
+      adresse: "Rue du Beau-Chêne\n7700 Mouscron",
+    },
+    {
+      nom: "Jane Smith Ext",
+      numero: "67890",
+      adresse: "Rue des Croisiers\n7712 Herseaux",
+    },
   ];
 
   return (
@@ -33,6 +41,7 @@ const NumerosTelephone = () => {
       <h1>Numéros de téléphone</h1>
       <NavBarInfosPratiques />
       <AnimatedContainer containerClass="sub-container">
+        <h2>Numéros de téléphone</h2>
         <RadioButtonSelector
           options={options}
           selectedOption={selectedOption}
