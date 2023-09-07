@@ -29,14 +29,10 @@
 }
 
 .table-data-schedule td {
-  height: 80px; /* Hauteur fixe pour les lignes, ajustez selon vos besoins */
-}
-
-.table-data-schedule tr:last-child td {
-  border-bottom: none;
+  height: 62px;
 }
 
 .table-data-schedule .semaine2 {
-  background-color: rgba($color-orange, 0.3);
+  background-color: rgba($color-orange, 0.2);
 }
 

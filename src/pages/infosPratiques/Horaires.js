@@ -49,7 +49,7 @@ const Horaires = () => {
   return (
     <div>
       <NavBarGlobal />
-      <h1>Horaires des agents</h1>
+      <h1>Horaire de l'équipe</h1>
       <NavBarInfosPratiques />
       <AnimatedContainer containerClass="sub-container">
         <h2>L'horaire de l'équipe</h2>

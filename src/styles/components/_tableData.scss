@@ -1,0 +1,39 @@
+.table-data, .table-data-small {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+  
+  .table-data th, .table-data td,
+  .table-data-small th, .table-data-small td {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .table-data th, .table-data-small th {
+    background-color: $color-orange; /* Couleur de fond personnalisée pour les éléments th */
+    color: #FFF; /* Couleur du texte dans les éléments th */
+    border-radius: 10px 100px;
+  }
+  
+  .table-data td, .table-data-small td {
+    height: 50px; /* Hauteur fixe pour les lignes, ajustez selon vos besoins */
+  }
+  
+  .table-data tr:last-child td,
+  .table-data-small tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .table-data-small {
+    width: 40%;
+  }
+  
+  .table-data-small th, .table-data-small td {
+    width:20%;
+  }
+  
+  .table-data tr:nth-child(even),
+  .table-data-small tr:nth-child(even) {
+    background-color: rgba($color-orange, 0.3);
+  }

@@ -123,35 +123,3 @@ button {
 button:hover {
   filter:brightness(90%)
 }
-
-/* Pour les pages "Numéros" et "Absences" */
-.radio-button-selector {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
-
-  label {
-    flex: 0.4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px;
-    cursor: pointer;
-    position: relative;
-    color: $color-darkGrey;
-
-    input[type="radio"] {
-      display: none;
-    }
-
-    &.selected {
-      background-color: $color-orange; /* Couleur de fond personnalisée pour les éléments th */
-      color: #FFF; /* Couleur du texte dans les éléments th */
-      border-radius:10px 10px;
-    }
-
-    &:not(.selected):hover {
-      color: $color-orangeSite;
-    }
-  }
-}
