@@ -12,7 +12,7 @@
 
 /* Style pour th (sauf la première cellule) */
 .table-data-schedule th:not(:first-child) {
-  background-color: $color-orange; /* Couleur de fond personnalisée pour les éléments th */
+  background-color: rgba($color-orange, 0.9); /* Couleur de fond personnalisée pour les éléments th */
   color: #FFF; /* Couleur du texte dans les éléments th */
   border-radius: 10px 100px;
 }

@@ -19,7 +19,7 @@
         }
 
         &.selected {
-            background-color: $color-orange; /* Couleur de fond personnalisée pour les éléments th */
+            background-color: rgba($color-orange, 0.9); /* Couleur de fond personnalisée pour les éléments th */
             color: #FFF; /* Couleur du texte dans les éléments th */
             border-radius: 10px 10px;
             transition: background-color 0.3s; /* Ajout de la transition pour le survol */
