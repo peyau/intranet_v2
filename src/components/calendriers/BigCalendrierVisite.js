@@ -27,7 +27,7 @@ const events = [
   // ... Ajoutez d'autres événements ici
 ];
 
-function BigCalendrierVisite() {
+const BigCalendrierVisite = () => {
   const [selectedEvent, setSelectedEvent] = useState(null);
 
   const handleEventClick = (event) => {
@@ -68,6 +68,6 @@ function BigCalendrierVisite() {
       />
     </div>
   );
-}
+};
 
 export default BigCalendrierVisite;

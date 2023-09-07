@@ -40,7 +40,7 @@ const events = [
   // ... Ajoutez d'autres événements ici
 ];
 
-function BigCalendrierProjet() {
+const BigCalendrierProjet = () => {
   const [selectedEvent, setSelectedEvent] = useState(null);
 
   const handleEventClick = (event) => {
@@ -81,6 +81,6 @@ function BigCalendrierProjet() {
       />
     </div>
   );
-}
+};
 
 export default BigCalendrierProjet;
