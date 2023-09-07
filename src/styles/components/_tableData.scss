@@ -11,22 +11,16 @@
   }
   
   .table-data th, .table-data-small th {
-    background-color: $color-orange; /* Couleur de fond personnalisée pour les éléments th */
-    color: #FFF; /* Couleur du texte dans les éléments th */
-    border-radius: 10px 100px;
+    border-bottom: 2px solid $color-orange;
+
   }
   
   .table-data td, .table-data-small td {
     height: 50px; /* Hauteur fixe pour les lignes, ajustez selon vos besoins */
   }
   
-  .table-data tr:last-child td,
-  .table-data-small tr:last-child td {
-    border-bottom: none;
-  }
-  
   .table-data-small {
-    width: 40%;
+    width: 80%;
   }
   
   .table-data-small th, .table-data-small td {
