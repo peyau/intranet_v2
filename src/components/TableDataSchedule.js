@@ -1,5 +1,36 @@
 import React from "react";
 
+const formatCells = (personne, semaine, joursSemaine) => {
+  return joursSemaine.map((jour, colIndex) => {
+    const { amStart, amEnd, pmStart, pmEnd } = personne[semaine][jour];
+
+    if (amStart && amEnd && pmStart && pmEnd) {
+      // Si les 4 valeurs sont complétées, affiche tout
+      return (
+        <td key={colIndex} className="schedule-cell">
+          {`${amStart} - ${amEnd}\n${pmStart} - ${pmEnd}`}
+        </td>
+      );
+    } else if ((amStart && amEnd) || (pmStart && pmEnd)) {
+      // Si 2 seulement sont complétées, affiche les 2 valeurs avec un "-"
+      return (
+        <td key={colIndex} className="schedule-cell">
+          {`${amStart ? amStart + " - " + amEnd : ""}${
+            amStart && pmStart ? "\n" : ""
+          }${pmStart ? pmStart + " - " + pmEnd : ""}`}
+        </td>
+      );
+    } else {
+      // Si aucune n'est complétée, affiche "-"
+      return (
+        <td key={colIndex} className="schedule-cell">
+          {"-"}
+        </td>
+      );
+    }
+  });
+};
+
 const TableDataSchedule = ({ data, className }) => {
   if (!data || data.length === 0) {
     return <p>Aucune donnée à afficher.</p>;
@@ -25,31 +56,12 @@ const TableDataSchedule = ({ data, className }) => {
             </tr>
             <tr className="semaine1">
               <td className="week-cell">Sem 1</td>
-              {joursSemaine.map((jour, colIndex) => (
-                <td key={colIndex} className="schedule-cell">
-                  {personne.semaine1[jour] &&
-                  personne.semaine1[jour].amStart &&
-                  personne.semaine1[jour].amEnd &&
-                  personne.semaine1[jour].pmStart &&
-                  personne.semaine1[jour].pmEnd
-                    ? `${personne.semaine1[jour].amStart} - ${personne.semaine1[jour].amEnd}\n${personne.semaine1[jour].pmStart} - ${personne.semaine1[jour].pmEnd}`
-                    : "-"}
-                </td>
-              ))}
+              {formatCells(personne, "semaine1", joursSemaine)}
             </tr>
+
             <tr className="semaine2">
               <td className="week-cell">Sem 2</td>
-              {joursSemaine.map((jour, colIndex) => (
-                <td key={colIndex} className="schedule-cell">
-                  {personne.semaine2[jour] &&
-                  personne.semaine2[jour].amStart &&
-                  personne.semaine2[jour].amEnd &&
-                  personne.semaine2[jour].pmStart &&
-                  personne.semaine2[jour].pmEnd
-                    ? `${personne.semaine2[jour].amStart} - ${personne.semaine2[jour].amEnd}\n${personne.semaine2[jour].pmStart} - ${personne.semaine2[jour].pmEnd}`
-                    : "-"}
-                </td>
-              ))}
+              {formatCells(personne, "semaine2", joursSemaine)}
             </tr>
           </React.Fragment>
         ))}
