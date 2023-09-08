@@ -8,7 +8,7 @@ const TableDataSchedule = ({ data, className }) => {
   const joursSemaine = Object.keys(data[0].semaine1);
 
   return (
-    <table className={`${className}`}>
+    <table className={className}>
       <thead>
         <tr>
           <th></th>
@@ -27,7 +27,13 @@ const TableDataSchedule = ({ data, className }) => {
               <td></td>
               {joursSemaine.map((jour, colIndex) => (
                 <td key={colIndex} className="schedule-cell">
-                  {`${personne.semaine1[jour].amStart} - ${personne.semaine1[jour].amEnd}\n${personne.semaine1[jour].pmStart} - ${personne.semaine1[jour].pmEnd}`}
+                  {personne.semaine1[jour] &&
+                  personne.semaine1[jour].amStart &&
+                  personne.semaine1[jour].amEnd &&
+                  personne.semaine1[jour].pmStart &&
+                  personne.semaine1[jour].pmEnd
+                    ? `${personne.semaine1[jour].amStart} - ${personne.semaine1[jour].amEnd}\n${personne.semaine1[jour].pmStart} - ${personne.semaine1[jour].pmEnd}`
+                    : "-"}
                 </td>
               ))}
             </tr>
@@ -35,7 +41,13 @@ const TableDataSchedule = ({ data, className }) => {
               <td></td>
               {joursSemaine.map((jour, colIndex) => (
                 <td key={colIndex} className="schedule-cell">
-                  {`${personne.semaine2[jour].amStart} - ${personne.semaine2[jour].amEnd}\n${personne.semaine2[jour].pmStart} - ${personne.semaine2[jour].pmEnd}`}
+                  {personne.semaine2[jour] &&
+                  personne.semaine2[jour].amStart &&
+                  personne.semaine2[jour].amEnd &&
+                  personne.semaine2[jour].pmStart &&
+                  personne.semaine2[jour].pmEnd
+                    ? `${personne.semaine2[jour].amStart} - ${personne.semaine2[jour].amEnd}\n${personne.semaine2[jour].pmStart} - ${personne.semaine2[jour].pmEnd}`
+                    : "-"}
                 </td>
               ))}
             </tr>

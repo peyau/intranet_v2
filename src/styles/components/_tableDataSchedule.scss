@@ -11,10 +11,16 @@
 }
 
 /* Style pour th (sauf la première cellule) */
-.table-data-schedule th:not(:first-child) {
+.table-data-schedule th:not(:first-child),
+.table-data th:not(:first-child) {
   background-color: rgba($color-orange, 0.9); /* Couleur de fond personnalisée pour les éléments th */
   color: #FFF; /* Couleur du texte dans les éléments th */
   border-radius: 10px 100px;
+}
+
+.table-data-schedule th,
+.table-data th {
+  border-bottom: none;
 }
 
 /* Style pour la première cellule th */

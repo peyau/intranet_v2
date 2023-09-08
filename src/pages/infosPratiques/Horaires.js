@@ -3,11 +3,18 @@ import NavBarGlobal from "../../components/navbars/NavBarGlobal";
 import NavBarInfosPratiques from "../../components/navbars/NavBarInfosPratiques";
 import AnimatedContainer from "../../components/AnimatedContainer";
 import RadioButtonSelector from "../../components/RadioButtonSelector";
-import TableData from "../../components/TableData";
 import TableDataSchedule from "../../components/TableDataSchedule";
+import TableDataScheduleWeek from "../../components/TableDataScheduleWeek";
 
 const Horaires = () => {
-  const [selectedOption, setSelectedOption] = useState("retro");
+  const defaultWeek = () => {
+    const currentDate = new Date();
+    const currentWeek = Math.ceil(currentDate.getDate() / 7);
+
+    return currentWeek === 1 ? "horaireS1" : "horaireS2";
+  };
+
+  const [selectedOption, setSelectedOption] = useState(defaultWeek());
 
   const handleOptionChange = (value) => {
     setSelectedOption(value);
@@ -140,15 +147,10 @@ const Horaires = () => {
         },
       },
       semaine2: {
-        lundi: {
-          amStart: "9h",
-          amEnd: "12h",
-          pmStart: "13h",
-          pmEnd: "17h",
-        },
+        lundi: {},
         mardi: {
           amStart: "9h",
-          amEnd: "12h",
+          amEnd: "13h",
           pmStart: "13h",
           pmEnd: "17h",
         },
@@ -174,7 +176,7 @@ const Horaires = () => {
           amStart: "9h",
           amEnd: "12h",
           pmStart: "13h",
-          pmEnd: "17h",
+          pmEnd: "19h",
         },
       },
     },
@@ -209,11 +211,19 @@ const Horaires = () => {
         )}
 
         {selectedOption === "horaireS1" && (
-          <TableData data={horaireSemaine1} className="table-data" />
+          <TableDataScheduleWeek
+            data={horaireSemaine1}
+            week={1}
+            className="table-data"
+          />
         )}
 
         {selectedOption === "horaireS2" && (
-          <TableData data={horaireSemaine2} className="table-data" />
+          <TableDataScheduleWeek
+            data={horaireSemaine2}
+            week={2}
+            className="table-data"
+          />
         )}
       </AnimatedContainer>
     </div>
