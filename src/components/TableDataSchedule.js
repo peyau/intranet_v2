@@ -26,20 +26,16 @@ const TableDataSchedule = ({ data, className }) => {
             <tr className="semaine1">
               <td></td>
               {joursSemaine.map((jour, colIndex) => (
-                <td key={colIndex}>
-                  {personne.semaine1[jour].split("\n").map((horaire, i) => (
-                    <div key={i}>{horaire}</div>
-                  ))}
+                <td key={colIndex} className="schedule-cell">
+                  {`${personne.semaine1[jour].amStart} - ${personne.semaine1[jour].amEnd}\n${personne.semaine1[jour].pmStart} - ${personne.semaine1[jour].pmEnd}`}
                 </td>
               ))}
             </tr>
             <tr className="semaine2">
               <td></td>
               {joursSemaine.map((jour, colIndex) => (
-                <td key={colIndex}>
-                  {personne.semaine2[jour].split("\n").map((horaire, i) => (
-                    <div key={i}>{horaire}</div>
-                  ))}
+                <td key={colIndex} className="schedule-cell">
+                  {`${personne.semaine2[jour].amStart} - ${personne.semaine2[jour].amEnd}\n${personne.semaine2[jour].pmStart} - ${personne.semaine2[jour].pmEnd}`}
                 </td>
               ))}
             </tr>
