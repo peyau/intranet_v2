@@ -1,3 +1,7 @@
+.table-data tbody:before {
+  line-height:0.8em; content:"\200C"; display:block;
+}
+
 .table-data-schedule{
   width: 100%;
   margin: 0 auto;
@@ -28,11 +32,17 @@
   background-color: transparent; /* Annule la couleur de fond */
 }
 
-.table-data-schedule .personne-nom {
+.table-data-schedule .personne-nom,
+.table-data .personne-nom {
   vertical-align: bottom;
   font-weight: 600;
   height:65px;
 }
+
+.table-data .personne-nom {
+  vertical-align: middle;
+}
+
 
 .table-data-schedule td {
   height: 62px;
@@ -44,4 +54,10 @@
 
 .schedule-cell {
   white-space: pre-line;
+}
+
+.week-cell {
+  transform: rotate(-30deg);
+  color: $color-orange;
+  font-weight: 600;
 }

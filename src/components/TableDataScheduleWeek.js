@@ -22,7 +22,7 @@ const TableDataScheduleWeek = ({ data, week, className }) => {
         <tbody>
           {data.map((personne, index) => (
             <tr key={index}>
-              <td>{personne.nom}</td>
+              <td className="personne-nom">{personne.nom}</td>
               {joursSemaine.map((jour) => (
                 <td key={jour} className="schedule-cell">
                   {personne[horaireSemaine] &&

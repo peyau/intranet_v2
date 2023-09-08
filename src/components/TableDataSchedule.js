@@ -24,7 +24,7 @@ const TableDataSchedule = ({ data, className }) => {
               <td className="personne-nom">{personne.nom}</td>
             </tr>
             <tr className="semaine1">
-              <td></td>
+              <td className="week-cell">Sem 1</td>
               {joursSemaine.map((jour, colIndex) => (
                 <td key={colIndex} className="schedule-cell">
                   {personne.semaine1[jour] &&
@@ -38,7 +38,7 @@ const TableDataSchedule = ({ data, className }) => {
               ))}
             </tr>
             <tr className="semaine2">
-              <td></td>
+              <td className="week-cell">Sem 2</td>
               {joursSemaine.map((jour, colIndex) => (
                 <td key={colIndex} className="schedule-cell">
                   {personne.semaine2[jour] &&
