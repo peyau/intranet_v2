@@ -8,8 +8,6 @@
   border-collapse: collapse;
 }
 
-
-
 /* Style pour th (sauf la première cellule) */
 .table-data-schedule th:not(:first-child),
 .table-data th:not(:first-child) {
@@ -23,11 +21,6 @@
   border-bottom: none;
 }
 
-/* Style pour la première cellule th */
-.table-data-schedule th:first-child {
-  background-color: transparent; /* Annule la couleur de fond */
-}
-
 .table-data-schedule .personne-nom,
 .table-data .personne-nom {
   vertical-align: bottom;
@@ -38,7 +31,6 @@
 .table-data .personne-nom {
   vertical-align: middle;
 }
-
 
 .table-data-schedule td {
   height: 62px;

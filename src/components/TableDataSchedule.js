@@ -60,9 +60,7 @@ const TableDataSchedule = ({ data, className }) => {
               />
             </th>
             {joursSemaine.map((jour, index) => (
-              <th key={index} className="table-header-cell">
-                {jour}
-              </th>
+              <th key={index}>{jour}</th>
             ))}
           </tr>
         </thead>
