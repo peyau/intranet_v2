@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { getWeek } from "date-fns";
 import NavBarGlobal from "../../components/navbars/NavBarGlobal";
 import NavBarInfosPratiques from "../../components/navbars/NavBarInfosPratiques";
 import AnimatedContainer from "../../components/AnimatedContainer";
@@ -7,14 +8,16 @@ import TableDataSchedule from "../../components/TableDataSchedule";
 import TableDataScheduleWeek from "../../components/TableDataScheduleWeek";
 
 const Horaires = () => {
-  const defaultWeek = () => {
+  const [selectedOption, setSelectedOption] = useState(null);
+
+  useEffect(() => {
     const currentDate = new Date();
-    const currentWeek = Math.ceil(currentDate.getDate() / 7);
+    const currentWeekNumber = getWeek(currentDate);
 
-    return currentWeek === 1 ? "horaireS1" : "horaireS2";
-  };
-
-  const [selectedOption, setSelectedOption] = useState(defaultWeek());
+    const selectedOption =
+      currentWeekNumber % 2 === 1 ? "horaireS1" : "horaireS2";
+    setSelectedOption(selectedOption);
+  }, []);
 
   const handleOptionChange = (value) => {
     setSelectedOption(value);
@@ -26,161 +29,7 @@ const Horaires = () => {
     { value: "horaireS2", label: "Horaires semaine 2" },
   ];
 
-  const horaire = [
-    {
-      nom: "Personne 1",
-      semaine1: {
-        lundi: {
-          amStart: "9h",
-          amEnd: "12h",
-          pmStart: "12h",
-          pmEnd: "17h",
-        },
-        mardi: {
-          amStart: "9h",
-          amEnd: "12h",
-          pmStart: "13h",
-          pmEnd: "17h",
-        },
-        mercredi: {
-          amStart: "9h",
-          amEnd: "12h",
-          pmStart: "13h",
-          pmEnd: "17h",
-        },
-        jeudi: {
-          amStart: "9h",
-          amEnd: "12h",
-          pmStart: "13h",
-          pmEnd: "17h",
-        },
-        vendredi: {
-          amStart: "9h",
-          amEnd: "12h",
-          pmStart: "13h",
-          pmEnd: "17h",
-        },
-        samedi: {
-          amStart: "9h",
-          amEnd: "12h",
-          pmStart: "13h",
-          pmEnd: "17h",
-        },
-      },
-      semaine2: {
-        lundi: {
-          amStart: "9h",
-          amEnd: "12h",
-          pmStart: "13h",
-          pmEnd: "17h",
-        },
-        mardi: {
-          amStart: "9h",
-          amEnd: "12h",
-          pmStart: "13h",
-          pmEnd: "17h",
-        },
-        mercredi: {
-          amStart: "9h",
-          amEnd: "12h",
-          pmStart: "13h",
-          pmEnd: "17h",
-        },
-        jeudi: {
-          amStart: "9h",
-          amEnd: "12h",
-          pmStart: "13h",
-          pmEnd: "17h",
-        },
-        vendredi: {
-          amStart: "9h",
-          amEnd: "12h",
-          pmStart: "13h",
-          pmEnd: "17h",
-        },
-        samedi: {
-          amStart: "9h",
-          amEnd: "12h",
-          pmStart: "13h",
-          pmEnd: "17h",
-        },
-      },
-    },
-    {
-      nom: "Personne 2",
-      semaine1: {
-        lundi: {
-          amStart: "9h",
-          amEnd: "12h",
-          pmStart: "12h",
-          pmEnd: "17h",
-        },
-        mardi: {
-          amStart: "9h",
-          amEnd: "12h",
-          pmStart: "13h",
-          pmEnd: "17h",
-        },
-        mercredi: {
-          amStart: "9h",
-          amEnd: "12h",
-          pmStart: "13h",
-          pmEnd: "17h",
-        },
-        jeudi: {
-          amStart: "9h",
-          amEnd: "12h",
-          pmStart: "13h",
-          pmEnd: "17h",
-        },
-        vendredi: {
-          amStart: "9h",
-          amEnd: "12h",
-          pmStart: "13h",
-          pmEnd: "17h",
-        },
-        samedi: {
-          amStart: "9h",
-          amEnd: "12h",
-          pmStart: "13h",
-          pmEnd: "17h",
-        },
-      },
-      semaine2: {
-        lundi: {},
-        mardi: {
-          amStart: "9h",
-          amEnd: "13h",
-          pmStart: "13h",
-          pmEnd: "17h",
-        },
-        mercredi: {
-          amStart: "9h",
-          amEnd: "12h",
-          pmStart: "13h",
-          pmEnd: "17h",
-        },
-        jeudi: {
-          amStart: "9h",
-          amEnd: "12h",
-          pmStart: "13h",
-          pmEnd: "17h",
-        },
-        vendredi: {
-          amStart: "9h",
-          amEnd: "12h",
-          pmStart: "13h",
-          pmEnd: "17h",
-        },
-        samedi: {
-          amStart: "9h",
-          amEnd: "12h",
-          pmStart: "13h",
-          pmEnd: "19h",
-        },
-      },
-    },
-  ];
+  const horaire = [];
 
   const horaireSemaine1 = horaire.map((person) => ({
     nom: person.nom,
