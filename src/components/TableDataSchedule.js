@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const formatCells = (personne, semaine, joursSemaine) => {
   return joursSemaine.map((jour, colIndex) => {
@@ -32,6 +32,13 @@ const formatCells = (personne, semaine, joursSemaine) => {
 };
 
 const TableDataSchedule = ({ data, className }) => {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearch = (event) => {
+    const value = event.target.value;
+    setSearchTerm(value);
+  };
+
   if (!data || data.length === 0) {
     return <p>Aucune donnée à afficher.</p>;
   }
@@ -39,34 +46,50 @@ const TableDataSchedule = ({ data, className }) => {
   const joursSemaine = Object.keys(data[0].semaine1);
 
   return (
-    <table className={className}>
-      <thead>
-        <tr>
-          <th></th>
-          {joursSemaine.map((jour, index) => (
-            <th key={index}>{jour}</th>
-          ))}
-        </tr>
-      </thead>
-      <tbody>
-        {data.map((personne, rowIndex) => (
-          <React.Fragment key={rowIndex}>
-            <tr>
-              <td className="personne-nom">{personne.nom}</td>
-            </tr>
-            <tr className="semaine1">
-              <td className="week-cell">Sem 1</td>
-              {formatCells(personne, "semaine1", joursSemaine)}
-            </tr>
+    <div>
+      <table className={className}>
+        <thead>
+          <tr>
+            <th>
+              <input
+                type="text"
+                placeholder="Rechercher par nom"
+                value={searchTerm}
+                onChange={handleSearch}
+                className="search-input"
+              />
+            </th>
+            {joursSemaine.map((jour, index) => (
+              <th key={index} className="table-header-cell">
+                {jour}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {data
+            .filter((personne) =>
+              personne.nom.toLowerCase().includes(searchTerm.toLowerCase())
+            )
+            .map((personne, rowIndex) => (
+              <React.Fragment key={rowIndex}>
+                <tr>
+                  <td className="personne-nom">{personne.nom}</td>
+                </tr>
+                <tr className="semaine1">
+                  <td className="week-cell">Sem 1</td>
+                  {formatCells(personne, "semaine1", joursSemaine)}
+                </tr>
 
-            <tr className="semaine2">
-              <td className="week-cell">Sem 2</td>
-              {formatCells(personne, "semaine2", joursSemaine)}
-            </tr>
-          </React.Fragment>
-        ))}
-      </tbody>
-    </table>
+                <tr className="semaine2">
+                  <td className="week-cell">Sem 2</td>
+                  {formatCells(personne, "semaine2", joursSemaine)}
+                </tr>
+              </React.Fragment>
+            ))}
+        </tbody>
+      </table>
+    </div>
   );
 };
 

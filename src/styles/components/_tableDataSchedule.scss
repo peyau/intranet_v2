@@ -2,17 +2,13 @@
   line-height:0.8em; content:"\200C"; display:block;
 }
 
-.table-data-schedule{
+.table-data-schedule {
   width: 100%;
   margin: 0 auto;
   border-collapse: collapse;
 }
 
-/* Style général pour th et td */
-.table-data-schedule th, .table-data-schedule td {
-  padding: 10px;
-  text-align: center;
-}
+
 
 /* Style pour th (sauf la première cellule) */
 .table-data-schedule th:not(:first-child),
@@ -52,11 +48,17 @@
   background-color: rgba($color-orange, 0.2);
 }
 
-.schedule-cell {
-  white-space: pre-line;
-}
-
-.week-cell {
+.table-data-schedule .week-cell {
   color: $color-orange;
   font-weight: 600;
+}
+
+.table-data-schedule .search-input,
+.table-data .search-input {
+  height: 40px;
+  width: 150px;
+}
+
+.schedule-cell {
+  white-space: pre-line;
 }

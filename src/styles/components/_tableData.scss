@@ -4,12 +4,6 @@
     border-collapse: collapse;
   }
   
-  .table-data th, .table-data td,
-  .table-data-small th, .table-data-small td {
-    padding: 10px;
-    text-align: center;
-  }
-  
   .table-data th, .table-data-small th {
     border-bottom: 2px solid $color-orange;
   }

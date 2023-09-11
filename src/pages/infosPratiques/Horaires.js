@@ -31,7 +31,7 @@ const Horaires = () => {
 
   const horaire = [
     {
-      nom: "Personne 1",
+      nom: "Jonathan Levaux",
       semaine1: {
         lundi: {
           amStart: "9h",
@@ -110,7 +110,7 @@ const Horaires = () => {
       },
     },
     {
-      nom: "Personne 2",
+      nom: "Elodie Lemeire",
       semaine1: {
         lundi: {
           amStart: "9h",

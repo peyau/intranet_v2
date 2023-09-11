@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const formatCells = (personne, horaireSemaine, joursSemaine) => {
   return joursSemaine.map((jour) => {
@@ -32,6 +32,13 @@ const formatCells = (personne, horaireSemaine, joursSemaine) => {
 };
 
 const TableDataScheduleWeek = ({ data, week, className }) => {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearch = (event) => {
+    const value = event.target.value;
+    setSearchTerm(value);
+  };
+
   if (!data || data.length === 0) {
     return <p>Aucune donnée à afficher.</p>;
   }
@@ -44,19 +51,33 @@ const TableDataScheduleWeek = ({ data, week, className }) => {
       <table className={className}>
         <thead>
           <tr>
-            <th></th>
+            <th>
+              <input
+                type="text"
+                placeholder="Rechercher par nom"
+                value={searchTerm}
+                onChange={handleSearch}
+                className="search-input"
+              />
+            </th>
             {joursSemaine.map((jour, index) => (
-              <th key={index}>{jour}</th>
+              <th key={index} className="table-header-cell">
+                {jour}
+              </th>
             ))}
           </tr>
         </thead>
         <tbody>
-          {data.map((personne, index) => (
-            <tr key={index}>
-              <td className="personne-nom">{personne.nom}</td>
-              {formatCells(personne, horaireSemaine, joursSemaine)}
-            </tr>
-          ))}
+          {data
+            .filter((personne) =>
+              personne.nom.toLowerCase().includes(searchTerm.toLowerCase())
+            )
+            .map((personne, index) => (
+              <tr key={index}>
+                <td className="personne-nom">{personne.nom}</td>
+                {formatCells(personne, horaireSemaine, joursSemaine)}
+              </tr>
+            ))}
         </tbody>
       </table>
     </div>
