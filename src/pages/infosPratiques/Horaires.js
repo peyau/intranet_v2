@@ -29,7 +29,161 @@ const Horaires = () => {
     { value: "horaireS2", label: "Horaires semaine 2" },
   ];
 
-  const horaire = [];
+  const horaire = [
+    {
+      nom: "Personne 1",
+      semaine1: {
+        lundi: {
+          amStart: "9h",
+          amEnd: "12h",
+          pmStart: "12h",
+          pmEnd: "17h",
+        },
+        mardi: {
+          amStart: "9h",
+          amEnd: "12h",
+          pmStart: "13h",
+          pmEnd: "17h",
+        },
+        mercredi: {
+          amStart: "9h",
+          amEnd: "12h",
+          pmStart: "13h",
+          pmEnd: "17h",
+        },
+        jeudi: {
+          amStart: "9h",
+          amEnd: "12h",
+          pmStart: "13h",
+          pmEnd: "17h",
+        },
+        vendredi: {
+          amStart: "9h",
+          amEnd: "12h",
+          pmStart: "13h",
+          pmEnd: "17h",
+        },
+        samedi: {
+          amStart: "9h",
+          amEnd: "12h",
+          pmStart: "13h",
+          pmEnd: "17h",
+        },
+      },
+      semaine2: {
+        lundi: {
+          amStart: "9h",
+          amEnd: "12h",
+          pmStart: "13h",
+          pmEnd: "17h",
+        },
+        mardi: {
+          amStart: "9h",
+          amEnd: "12h",
+          pmStart: "13h",
+          pmEnd: "17h",
+        },
+        mercredi: {
+          amStart: "9h",
+          amEnd: "12h",
+          pmStart: "13h",
+          pmEnd: "17h",
+        },
+        jeudi: {
+          amStart: "9h",
+          amEnd: "12h",
+          pmStart: "13h",
+          pmEnd: "17h",
+        },
+        vendredi: {
+          amStart: "9h",
+          amEnd: "12h",
+          pmStart: "13h",
+          pmEnd: "17h",
+        },
+        samedi: {
+          amStart: "9h",
+          amEnd: "12h",
+          pmStart: "13h",
+          pmEnd: "17h",
+        },
+      },
+    },
+    {
+      nom: "Personne 2",
+      semaine1: {
+        lundi: {
+          amStart: "9h",
+          amEnd: "12h",
+          pmStart: "12h",
+          pmEnd: "17h",
+        },
+        mardi: {
+          amStart: "9h",
+          amEnd: "12h",
+          pmStart: "13h",
+          pmEnd: "17h",
+        },
+        mercredi: {
+          amStart: "9h",
+          amEnd: "12h",
+          pmStart: "13h",
+          pmEnd: "17h",
+        },
+        jeudi: {
+          amStart: "9h",
+          amEnd: "12h",
+          pmStart: "13h",
+          pmEnd: "17h",
+        },
+        vendredi: {
+          amStart: "9h",
+          amEnd: "12h",
+          pmStart: "13h",
+          pmEnd: "17h",
+        },
+        samedi: {
+          amStart: "9h",
+          amEnd: "12h",
+          pmStart: "13h",
+          pmEnd: "17h",
+        },
+      },
+      semaine2: {
+        lundi: {},
+        mardi: {
+          amStart: "9h",
+          amEnd: "13h",
+          pmStart: "13h",
+          pmEnd: "17h",
+        },
+        mercredi: {
+          amStart: "9h",
+          amEnd: "12h",
+          pmStart: "13h",
+          pmEnd: "17h",
+        },
+        jeudi: {
+          amStart: "9h",
+          amEnd: "12h",
+          pmStart: "13h",
+          pmEnd: "17h",
+        },
+        vendredi: {
+          amStart: "9h",
+          amEnd: "12h",
+          pmStart: "13h",
+          pmEnd: "17h",
+        },
+        samedi: {
+          amStart: "9h",
+          amEnd: "12h",
+          pmStart: "13h",
+          pmEnd: "19h",
+        },
+      },
+    },
+  ];
 
   const horaireSemaine1 = horaire.map((person) => ({
     nom: person.nom,
