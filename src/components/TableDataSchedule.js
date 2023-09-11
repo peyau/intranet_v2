@@ -46,7 +46,6 @@ const TableDataSchedule = ({ data, className }) => {
   const joursSemaine = Object.keys(data[0].semaine1);
 
   return (
-    <div>
       <table className={className}>
         <thead>
           <tr>
@@ -87,7 +86,6 @@ const TableDataSchedule = ({ data, className }) => {
             ))}
         </tbody>
       </table>
-    </div>
   );
 };
 
