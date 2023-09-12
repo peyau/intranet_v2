@@ -1,36 +1,5 @@
 import React, { useState } from "react";
-
-const formatCells = (personne, semaine, joursSemaine) => {
-  return joursSemaine.map((jour, colIndex) => {
-    const { amStart, amEnd, pmStart, pmEnd } = personne[semaine][jour];
-
-    if (amStart && amEnd && pmStart && pmEnd) {
-      // Si les 4 valeurs sont complétées, affiche tout
-      return (
-        <td key={colIndex} className="schedule-cell">
-          {amStart} - {amEnd}
-          <br />
-          {pmStart} - {pmEnd}
-        </td>
-      );
-    } else if ((amStart && amEnd) || (pmStart && pmEnd)) {
-      // Si 2 seulement sont complétées, affiche les 2 valeurs avec un "-"
-      return (
-        <td key={colIndex} className="schedule-cell">
-          {amStart ? `${amStart} - ${amEnd}` : ""}
-          {pmStart ? `${pmStart} - ${pmEnd}` : ""}
-        </td>
-      );
-    } else {
-      // Si aucune n'est complétée, affiche "-"
-      return (
-        <td key={colIndex} className="schedule-cell">
-          {"-"}
-        </td>
-      );
-    }
-  });
-};
+import FormatSchedule from "./FormatSchedule";
 
 const TableDataSchedule = ({ data, className }) => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -77,12 +46,28 @@ const TableDataSchedule = ({ data, className }) => {
                 </tr>
                 <tr className="semaine1">
                   <td className="week-cell">Sem 1</td>
-                  {formatCells(personne, "semaine1", joursSemaine)}
+                  {joursSemaine.map((jour, colIndex) => (
+                    <FormatSchedule
+                      key={colIndex}
+                      amStart={personne.semaine1[jour].amStart}
+                      amEnd={personne.semaine1[jour].amEnd}
+                      pmStart={personne.semaine1[jour].pmStart}
+                      pmEnd={personne.semaine1[jour].pmEnd}
+                    />
+                  ))}
                 </tr>
 
                 <tr className="semaine2">
                   <td className="week-cell">Sem 2</td>
-                  {formatCells(personne, "semaine2", joursSemaine)}
+                  {joursSemaine.map((jour, colIndex) => (
+                    <FormatSchedule
+                      key={colIndex}
+                      amStart={personne.semaine2[jour].amStart}
+                      amEnd={personne.semaine2[jour].amEnd}
+                      pmStart={personne.semaine2[jour].pmStart}
+                      pmEnd={personne.semaine2[jour].pmEnd}
+                    />
+                  ))}
                 </tr>
               </React.Fragment>
             ))}

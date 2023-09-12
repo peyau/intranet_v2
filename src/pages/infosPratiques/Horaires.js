@@ -92,12 +92,8 @@ const Horaires = () => {
         jeudi: {
           amStart: "9h",
           amEnd: "12h",
-          pmStart: "13h",
-          pmEnd: "17h",
         },
         vendredi: {
-          amStart: "9h",
-          amEnd: "12h",
           pmStart: "13h",
           pmEnd: "17h",
         },
