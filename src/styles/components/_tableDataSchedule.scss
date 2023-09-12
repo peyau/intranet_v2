@@ -1,3 +1,8 @@
+.table-container {
+  max-height: 420px;
+  overflow: auto;
+}
+
 .table-data tbody:before {
   line-height:0.8em; content:"\200C"; display:block;
 }

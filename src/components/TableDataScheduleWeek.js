@@ -47,7 +47,7 @@ const TableDataScheduleWeek = ({ data, week, className }) => {
   const joursSemaine = Object.keys(data[0][horaireSemaine]);
 
   return (
-    <div>
+    <div className="table-container">
       <table className={className}>
         <thead>
           <tr>
