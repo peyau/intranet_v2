@@ -31,7 +31,8 @@ const Horaires = () => {
 
   const horaire = [
     {
-      nom: "Jonathan Levaux",
+      nom: "Levaux",
+      prenom: "Jonathan",
       semaine1: {
         lundi: {
           amStart: "9h",
@@ -106,7 +107,8 @@ const Horaires = () => {
       },
     },
     {
-      nom: "Elodie Lemeire",
+      nom: "Lemeire",
+      prenom: "Elodie",
       semaine1: {
         lundi: {
           amStart: "9h",
@@ -183,12 +185,14 @@ const Horaires = () => {
 
   const horaireSemaine1 = horaire.map((person) => ({
     nom: person.nom,
+    prenom: person.prenom,
     semaine1: person.semaine1,
   }));
 
   // Créez horaireSemaine2 en extrayant les données de la semaine 2 de chaque personne
   const horaireSemaine2 = horaire.map((person) => ({
     nom: person.nom,
+    prenom: person.prenom,
     semaine2: person.semaine2,
   }));
 

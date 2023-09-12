@@ -37,12 +37,16 @@ const TableDataScheduleWeek = ({ data, week, className }) => {
         </thead>
         <tbody>
           {data
-            .filter((personne) =>
-              personne.nom.toLowerCase().includes(searchTerm.toLowerCase())
+            .filter(
+              (personne) =>
+                personne.nom.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                personne.prenom.toLowerCase().includes(searchTerm.toLowerCase())
             )
             .map((personne, index) => (
               <tr key={index}>
-                <td className="personne-nom">{personne.nom}</td>
+                <td className="personne-nom">
+                  {personne.nom} {personne.prenom}
+                </td>
                 {joursSemaine.map((jour, colIndex) => (
                   <FormatSchedule
                     key={colIndex}

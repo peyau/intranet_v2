@@ -36,13 +36,17 @@ const TableDataSchedule = ({ data, className }) => {
         </thead>
         <tbody>
           {data
-            .filter((personne) =>
-              personne.nom.toLowerCase().includes(searchTerm.toLowerCase())
+            .filter(
+              (personne) =>
+                personne.nom.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                personne.prenom.toLowerCase().includes(searchTerm.toLowerCase())
             )
             .map((personne, rowIndex) => (
               <React.Fragment key={rowIndex}>
                 <tr>
-                  <td className="personne-nom">{personne.nom}</td>
+                  <td className="personne-nom">
+                    {personne.nom} {personne.prenom}
+                  </td>
                 </tr>
                 <tr className="semaine1">
                   <td className="week-cell">Sem 1</td>
