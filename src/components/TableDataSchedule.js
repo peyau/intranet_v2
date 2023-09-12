@@ -17,7 +17,7 @@ const formatCells = (personne, semaine, joursSemaine) => {
       // Si 2 seulement sont complétées, affiche les 2 valeurs avec un "-"
       return (
         <td key={colIndex} className="schedule-cell">
-          {amStart ? `${amStart} - ${amEnd}<br />` : ""}
+          {amStart ? `${amStart} - ${amEnd}` : ""}
           {pmStart ? `${pmStart} - ${pmEnd}` : ""}
         </td>
       );
