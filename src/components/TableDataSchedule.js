@@ -8,16 +8,17 @@ const formatCells = (personne, semaine, joursSemaine) => {
       // Si les 4 valeurs sont complétées, affiche tout
       return (
         <td key={colIndex} className="schedule-cell">
-          {`${amStart} - ${amEnd}\n${pmStart} - ${pmEnd}`}
+          {amStart} - {amEnd}
+          <br />
+          {pmStart} - {pmEnd}
         </td>
       );
     } else if ((amStart && amEnd) || (pmStart && pmEnd)) {
       // Si 2 seulement sont complétées, affiche les 2 valeurs avec un "-"
       return (
         <td key={colIndex} className="schedule-cell">
-          {`${amStart ? amStart + " - " + amEnd : ""}${
-            amStart && pmStart ? "\n" : ""
-          }${pmStart ? pmStart + " - " + pmEnd : ""}`}
+          {amStart ? `${amStart} - ${amEnd}<br />` : ""}
+          {pmStart ? `${pmStart} - ${pmEnd}` : ""}
         </td>
       );
     } else {

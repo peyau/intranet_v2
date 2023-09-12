@@ -1,29 +1,30 @@
 import React, { useState } from "react";
 
-const formatCells = (personne, horaireSemaine, joursSemaine) => {
-  return joursSemaine.map((jour) => {
-    const { amStart, amEnd, pmStart, pmEnd } = personne[horaireSemaine][jour];
+const formatCells = (personne, semaine, joursSemaine) => {
+  return joursSemaine.map((jour, colIndex) => {
+    const { amStart, amEnd, pmStart, pmEnd } = personne[semaine][jour];
 
     if (amStart && amEnd && pmStart && pmEnd) {
       // Si les 4 valeurs sont complétées, affiche tout
       return (
-        <td key={jour} className="schedule-cell">
-          {`${amStart} - ${amEnd}\n${pmStart} - ${pmEnd}`}
+        <td key={colIndex} className="schedule-cell">
+          {amStart} - {amEnd}
+          <br />
+          {pmStart} - {pmEnd}
         </td>
       );
     } else if ((amStart && amEnd) || (pmStart && pmEnd)) {
       // Si 2 seulement sont complétées, affiche les 2 valeurs avec un "-"
       return (
-        <td key={jour} className="schedule-cell">
-          {`${amStart ? amStart + " - " + amEnd : ""}${
-            amStart && pmStart ? "\n" : ""
-          }${pmStart ? pmStart + " - " + pmEnd : ""}`}
+        <td key={colIndex} className="schedule-cell">
+          {amStart ? `${amStart} - ${amEnd}<br />` : ""}
+          {pmStart ? `${pmStart} - ${pmEnd}` : ""}
         </td>
       );
     } else {
       // Si aucune n'est complétée, affiche "-"
       return (
-        <td key={jour} className="schedule-cell">
+        <td key={colIndex} className="schedule-cell">
           {"-"}
         </td>
       );
