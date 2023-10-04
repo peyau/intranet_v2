@@ -41,13 +41,7 @@
   border-radius: 5px;
   margin-bottom: 15px;
 }
-  
+
 .modal-button {
-  background-color: $color-salmon;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
+  @include default-button;
 }

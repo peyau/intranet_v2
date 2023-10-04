@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Accueil from "./pages/Accueil";
@@ -18,6 +18,8 @@ import Calendrier from "./components/calendriers/Calendrier";
 import { DateProvider } from "./components/calendriers/DateContext";
 
 const App = () => {
+  const [showCalendar, setShowCalendar] = useState(false);
+
   return (
     <Router>
       <DateProvider>
@@ -37,16 +39,21 @@ const App = () => {
             />
             <Route path="/infospratiques/protocoles" element={<Protocoles />} />
             <Route path="/infospratiques/FAQ" element={<FAQ />} />
-            <Route
-              path="/infospratiques/agendas"
-              element={<Agendas />}
-            />
+            <Route path="/infospratiques/agendas" element={<Agendas />} />
             <Route path="/perso" element={<PagePerso />} />
 
             <Route path="*" element={<Accueil />} />
           </Routes>
         </div>
-        <div className="calendar-fixed">
+        <button
+          className="toggle-calendar-btn"
+          onClick={() => setShowCalendar(!showCalendar)}
+        >
+          {showCalendar ? "Cacher le calendrier" : "Afficher le calendrier"}
+        </button>
+        <div
+          className={`calendar-fixed ${showCalendar ? "show-calendar" : ""}`}
+        >
           <Calendrier />
         </div>
       </DateProvider>
