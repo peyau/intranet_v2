@@ -49,7 +49,7 @@ const App = () => {
           className="toggle-calendar-btn"
           onClick={() => setShowCalendar(!showCalendar)}
         >
-          {showCalendar ? "Cacher le calendrier" : "Afficher le calendrier"}
+          {showCalendar ? "Cacher" : "Afficher"}
         </button>
         <div
           className={`calendar-fixed ${showCalendar ? "show-calendar" : ""}`}

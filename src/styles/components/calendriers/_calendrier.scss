@@ -15,10 +15,10 @@
   }
   
   .toggle-calendar-btn {
-    @include default-button($color-orangeSite);
-    position: absolute; // ou "fixed" si vous voulez qu'il reste en haut lors du défilement
-    top: 5%;          // ajustez selon vos besoins
-    left: 4%;        // ajustez selon vos besoins
+    @include default-button($color-salmon);
+    position: fixed;
+    top: 211px;
+    right: 1%;
     z-index: 10;        // pour s'assurer qu'il apparaît au-dessus des autres éléments
   
     @media (min-width: 1701px) {
