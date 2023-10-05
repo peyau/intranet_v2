@@ -1,7 +1,7 @@
 // TitreEtLogo.js
 import React from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../../assets/img/logo_intranet_1.png";
+import logo from "../../assets/img/logo_intranet_automne.png";
 
 const TitreLogo = () => {
   return (
