@@ -1,44 +1,50 @@
-/* _titreEtLogo.scss */
 .titre-logo {
-    display: flex;
-    align-items: center;
-    font-size: 1.2rem;
-    font-weight: bold;
-    padding: 10px 0px; 
-    z-index: 2;
-    position: relative; /* Utiliser le positionnement relatif */
-    margin-right: auto; /* Centrer le composant à gauche de la div navbar */
-  }
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 0px; 
+  z-index: 2;
+  position: relative;
+  margin-right: auto;
 
-  .titre-logo a {
+  a {
     text-decoration: none;
   }
 
-  .custom-align-left {
-    justify-content: flex-start; /* Annuler l'alignement à droite pour cette div */
-  }
-  
   .logo {
     width: 60px;
     height: 60px;
     margin-right: 10px;
   }
-  
+
   .titre-container {
     display: flex;
-    flex-direction: column; /* Utiliser une disposition en colonne pour les deux lignes */
+    flex-direction: column;
   }
-  
+
   .bibliotheque {
     color: black;
   }
-  
+
   .barre-oblique {
-    margin: 15px; /* Augmenter l'espace autour de la barre oblique */
-    font-size: 2.5rem; /* Modifier la taille de la barre oblique */
-    color: $color-orangeSite; /* Modifier la couleur de la barre oblique */
+    margin: 15px;
+    font-size: 2.5rem;
+    color: $color-orangeSite;
   }
-  
+
   .intranet {
     color: $color-orangeSite;
   }
+
+  @media (max-width: 1700px) {
+    .bibliotheque,
+    .barre-oblique {
+      display: none;
+    }
+    .logo {
+      height: 50px;
+      width: 50px;
+    }
+  }
+}
