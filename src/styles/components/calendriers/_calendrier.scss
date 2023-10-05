@@ -14,14 +14,16 @@
     }
   }
   
-  .toggle-calendar-btn {
-    @include default-button($color-salmon);
+  .calendar-toggle img {
     position: fixed;
-    top: 211px;
+    cursor:pointer; 
+    height: 35px;
+    width: 35px;
+    top: 100px;
     right: 1%;
     z-index: 10;        // pour s'assurer qu'il apparaît au-dessus des autres éléments
   
-    @media (min-width: 1701px) {
+    @media (min-width: 1700px) {
       display: none; // cache le bouton pour les écrans dont la largeur est supérieure à 1700px
     }
   }

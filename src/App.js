@@ -20,6 +20,10 @@ import { DateProvider } from "./components/calendriers/DateContext";
 const App = () => {
   const [showCalendar, setShowCalendar] = useState(false);
 
+  const toggleCalendar = () => {
+    setShowCalendar(!showCalendar);
+  };
+
   return (
     <Router>
       <DateProvider>
@@ -45,12 +49,9 @@ const App = () => {
             <Route path="*" element={<Accueil />} />
           </Routes>
         </div>
-        <button
-          className="toggle-calendar-btn"
-          onClick={() => setShowCalendar(!showCalendar)}
-        >
-          {showCalendar ? "Cacher" : "Afficher"}
-        </button>
+        <div className={`calendar-toggle`} onClick={toggleCalendar}>
+          <img src="logo_calendrier.png" alt="Calendrier" />
+        </div>
         <div
           className={`calendar-fixed ${showCalendar ? "show-calendar" : ""}`}
         >
