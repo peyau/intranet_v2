@@ -65,16 +65,6 @@ body {
   }
 }
 
-@mixin default-button($backgroundColor: $color-salmon) {
-  background-color: $backgroundColor;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
 .sub-container {
   @include animated-container;
 }
