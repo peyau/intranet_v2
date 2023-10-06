@@ -1,0 +1,32 @@
+.faq-container {
+    text-align: left;
+
+    h3, h4 {
+      cursor: pointer;
+      user-select: none;
+    }
+
+    h3 {
+        color: $color-orange;
+        padding: 10px; 
+
+        &.active {  // Style pour le thème sélectionné
+          border-bottom: 3px solid $color-orange; // Ajout d'une bordure inférieure pour indiquer le thème actif
+          width: 33%;
+        }
+      }
+
+
+    h4 {
+      background-color: $color-orangeSite; // Orange clair pour le background (encore une fois, ajustez selon vos préférences)
+      padding: 10px; // Ajout de padding pour de l'espace autour du texte
+      margin: 10px 0; // Ajout d'une marge pour séparer les questions
+      border-radius: 5px; // Ajout de coins arrondis pour un aspect plus doux
+      color:white;
+    }
+
+    p {
+        padding: 10px; // Ajout de padding pour de l'espace autour du texte
+        margin: 10px 0; // Ajout d'une marge pour séparer les questions
+    }
+}

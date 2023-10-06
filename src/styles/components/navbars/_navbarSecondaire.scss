@@ -4,6 +4,7 @@
   display: flex;
   justify-content: flex-start; /* Aligner le contenu à gauche */
   align-items: center;
+  user-select: none;
 }
 
 .navbar-secondaire ul {

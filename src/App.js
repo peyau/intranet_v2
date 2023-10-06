@@ -16,6 +16,7 @@ import FAQ from "./pages/infosPratiques/FAQ";
 import Agendas from "./pages/infosPratiques/Agendas";
 import Calendrier from "./components/calendriers/Calendrier";
 import { DateProvider } from "./components/calendriers/DateContext";
+import logoCalendrier from "./assets/img/logo_calendrier.png";
 
 const App = () => {
   const [showCalendar, setShowCalendar] = useState(false);
@@ -50,7 +51,7 @@ const App = () => {
           </Routes>
         </div>
         <div className={`calendar-toggle`} onClick={toggleCalendar}>
-          <img src="logo_calendrier.png" alt="Calendrier" />
+          <img src={logoCalendrier} alt="Calendrier" />
         </div>
         <div
           className={`calendar-fixed ${showCalendar ? "show-calendar" : ""}`}
