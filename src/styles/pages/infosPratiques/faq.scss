@@ -12,15 +12,11 @@
       padding-right: 25px; // Faites de la place pour la flèche à droite
 
       &::after {
-          content: "\142F"; // Utilisez un symbole de flèche vers le bas
-          position: absolute;
-          right: 10px;
-          transition: transform 0.3s; // Pour une animation douce lors de la rotation
-          margin-right: 65%;
-      }
-
-      &:hover::after {
-        transform: rotate(180deg); // Fait pivoter la flèche pour qu'elle pointe vers le haut lorsqu'elle est survolée
+        content: "\142F"; // Utilisez un symbole de flèche vers le bas
+        position: absolute;
+        right: 10px;
+        transition: transform 0.3s; // Pour une animation douce lors de la rotation
+        margin-right: 65%;
       }
 
       &.active {  
@@ -29,8 +25,12 @@
         border-radius: 10px;
 
         &::after {
-            transform: rotate(180deg); // Fait pivoter la flèche pour qu'elle pointe vers le haut lorsqu'elle est active
+          transform: rotate(180deg); // Fait pivoter la flèche pour qu'elle pointe vers le haut lorsqu'elle est active
         }
+      }
+      
+      &:hover::after {
+        transform: rotate(180deg); // Fait pivoter la flèche pour qu'elle pointe vers le haut lorsqu'elle est survolée
       }
     }
 
