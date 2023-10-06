@@ -38,14 +38,19 @@ const FAQ = () => {
       <h1>FAQ</h1>
       <NavBarInfosPratiques />
       <AnimatedContainer containerClass="sub-container">
-        <h2>La FAQ</h2>
+        <h2>Foire aux questions</h2>
         {faqData.map((theme, themeIndex) => (
           <div key={themeIndex} className="faq-container">
             <h3
               className={activeTheme === themeIndex ? "active" : ""}
-              onClick={() =>
-                setActiveTheme(themeIndex !== activeTheme ? themeIndex : null)
-              }
+              onClick={() => {
+                if (themeIndex !== activeTheme) {
+                  setActiveTheme(themeIndex);
+                  setActiveQuestion(null); // Réinitialisez l'état de la question active
+                } else {
+                  setActiveTheme(null);
+                }
+              }}
             >
               {theme.theme}
             </h3>
@@ -53,6 +58,7 @@ const FAQ = () => {
               theme.questions.map((question, questionIndex) => (
                 <div key={questionIndex}>
                   <h4
+                    className={activeQuestion === questionIndex ? "active" : ""}
                     onClick={() => {
                       if (activeQuestion === questionIndex) {
                         setActiveQuestion(null); // Ferme la question si elle est déjà ouverte

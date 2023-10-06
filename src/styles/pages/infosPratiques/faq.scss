@@ -7,26 +7,48 @@
     }
 
     h3 {
-        color: $color-orange;
-        padding: 10px; 
+      color: $color-orange;
+      padding: 10px;
+      padding-right: 25px; // Faites de la place pour la flèche à droite
 
-        &.active {  // Style pour le thème sélectionné
-          border-bottom: 3px solid $color-orange; // Ajout d'une bordure inférieure pour indiquer le thème actif
-          width: 33%;
-        }
+      &::after {
+          content: "\142F"; // Utilisez un symbole de flèche vers le bas
+          position: absolute;
+          right: 10px;
+          transition: transform 0.3s; // Pour une animation douce lors de la rotation
+          margin-right: 65%;
       }
 
+      &:hover::after {
+        transform: rotate(180deg); // Fait pivoter la flèche pour qu'elle pointe vers le haut lorsqu'elle est survolée
+      }
+
+      &.active {  
+        border: 3px solid $color-orange;
+        width: 33%;
+        border-radius: 10px;
+
+        &::after {
+            transform: rotate(180deg); // Fait pivoter la flèche pour qu'elle pointe vers le haut lorsqu'elle est active
+        }
+      }
+    }
 
     h4 {
       background-color: $color-orangeSite; // Orange clair pour le background (encore une fois, ajustez selon vos préférences)
       padding: 10px; // Ajout de padding pour de l'espace autour du texte
       margin: 10px 0; // Ajout d'une marge pour séparer les questions
       border-radius: 5px; // Ajout de coins arrondis pour un aspect plus doux
-      color:white;
+      color:white;  
+
+      &:hover{
+        filter:brightness(105%);
+      }
     }
 
     p {
         padding: 10px; // Ajout de padding pour de l'espace autour du texte
         margin: 10px 0; // Ajout d'une marge pour séparer les questions
     }
+
 }
