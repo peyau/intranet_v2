@@ -40,6 +40,7 @@
       margin: 10px 0; // Ajout d'une marge pour séparer les questions
       border-radius: 5px; // Ajout de coins arrondis pour un aspect plus doux
       color:white;  
+      transition: background-color 0.3s;
 
       &:hover{
         background-color: rgba($color-orangeSite, 0.8);
