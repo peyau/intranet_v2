@@ -42,7 +42,7 @@
       color:white;  
 
       &:hover{
-        filter:brightness(105%);
+        background-color: rgba($color-orangeSite, 0.8);
       }
     }
 

@@ -26,6 +26,23 @@ const faqData = [
       },
     ],
   },
+  {
+    theme: "Thème 3",
+    questions: [
+      {
+        question: "Question 3.1",
+        answer: "Réponse 3.1",
+      },
+      {
+        question: "Question 3.2",
+        answer: "Réponse 3.2",
+      },
+      {
+        question: "Question 3.3",
+        answer: "Réponse 3.3",
+      },
+    ],
+  },
 ];
 
 const FAQ = () => {
