@@ -16,21 +16,22 @@
         position: absolute;
         right: 10px;
         transition: transform 0.3s; // Pour une animation douce lors de la rotation
-        margin-right: 65%;
+        margin-right: 5%;
+        font-size: 17px;
+      }
+
+      &:hover:not(.active) { 
+        border-left: 2px solid rgba($color-orange, 0.8);
       }
 
       &.active {  
-        border: 3px solid $color-orange;
-        width: 33%;
+        border: 2px solid $color-orange;
+        width: 100%;
         border-radius: 10px;
 
         &::after {
-          transform: rotate(180deg); // Fait pivoter la flèche pour qu'elle pointe vers le haut lorsqu'elle est active
+          transform: rotate(90deg); // Fait pivoter la flèche pour qu'elle pointe vers la gauche lorsqu'elle est active
         }
-      }
-      
-      &:hover::after {
-        transform: rotate(180deg); // Fait pivoter la flèche pour qu'elle pointe vers le haut lorsqu'elle est survolée
       }
     }
 
