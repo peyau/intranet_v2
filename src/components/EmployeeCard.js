@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import importedImages from "./ImportImages.js";
+import ModalEmploye from "./modals/ModalEmploye";
 
 const employeesData = [
   {
@@ -9,6 +10,7 @@ const employeesData = [
     fonction: "Chargée de communication",
     bureau: "4e étage",
     telephone: "056/860.691",
+    cercle: "Ceci est une information qu'on ne voit pas sur la page 'Equipe'",
   },
   {
     id: 2,
@@ -17,6 +19,7 @@ const employeesData = [
     fonction: "Responsable informatique",
     bureau: "1er étage",
     telephone: "056/860.692",
+    cercle: "Ceci est une information qu'on ne voit pas sur la page 'Equipe'",
   },
   {
     id: 3,
@@ -25,13 +28,24 @@ const employeesData = [
     fonction: "Animatrice EPN",
     bureau: "1er étage",
     telephone: "056/860.692",
+    cercle: "Ceci est une information qu'on ne voit pas sur la page 'Equipe'",
   },
 
   // ... autres employés
 ];
 
-function EmployeeCard() {
+const EmployeeCard = () => {
   const [searchTerm, setSearchTerm] = useState("");
+
+  const [selectedEmployee, setSelectedEmployee] = useState(null);
+
+  const handleEmployeeClick = (employee) => {
+    setSelectedEmployee(employee);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedEmployee(null);
+  };
 
   const filteredEmployees = employeesData.filter(
     (employee) =>
@@ -61,7 +75,11 @@ function EmployeeCard() {
         {sortedEmployees.map((employee) => {
           const imageEmployee = `${employee.prenom}_${employee.nom}`;
           return (
-            <div className="card" key={employee.id}>
+            <div
+              className="card"
+              key={employee.id}
+              onClick={() => handleEmployeeClick(employee)}
+            >
               <img
                 src={importedImages[imageEmployee]}
                 alt={`${employee.prenom} ${employee.nom}`}
@@ -82,8 +100,12 @@ function EmployeeCard() {
           );
         })}
       </div>
+      <ModalEmploye
+        selectedEmployee={selectedEmployee}
+        onClose={handleCloseModal}
+      />
     </div>
   );
-}
+};
 
 export default EmployeeCard;
