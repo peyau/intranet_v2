@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from "react-modal";
 
-function ModalCalendrier({ selectedEvent, onClose }) {
+const ModalCalendrier = ({ selectedEvent, onClose }) => {
   return (
     <Modal
       isOpen={selectedEvent !== null}
@@ -18,6 +18,6 @@ function ModalCalendrier({ selectedEvent, onClose }) {
       )}
     </Modal>
   );
-}
+};
 
 export default ModalCalendrier;
