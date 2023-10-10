@@ -30,8 +30,17 @@ const employeesData = [
     telephone: "056/860.692",
     cercle: "Ceci est une information qu'on ne voit pas sur la page 'Equipe'",
   },
+  {
+    id: 4,
+    nom: "Herman",
+    prenom: "Emilie",
+    fonction: "Directrice adjointe",
+    bureau: "4e étage",
+    telephone: "056/860.682",
+    cercle: "Ceci est une information qu'on ne voit pas sur la page 'Equipe'",
+  },
 
-  // ... autres employés
+  // ... autres employés / Alimentation automatique par la BDD
 ];
 
 const EmployeeCard = () => {
@@ -80,12 +89,13 @@ const EmployeeCard = () => {
               key={employee.id}
               onClick={() => handleEmployeeClick(employee)}
             >
-              <img
-                src={importedImages[imageEmployee]}
-                alt={`${employee.prenom} ${employee.nom}`}
-                className="employeeImage"
-              />
-
+              <div className="image-container">
+                <img
+                  src={importedImages[imageEmployee]}
+                  alt={`${employee.prenom} ${employee.nom}`}
+                  className="employeeImage"
+                />
+              </div>
               <div className="cardContent">
                 <span className="name">
                   {employee.prenom} {employee.nom}
