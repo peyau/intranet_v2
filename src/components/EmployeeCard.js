@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import importedImages from "./ImportImages.js";
+import defaultImage from "../assets/img/cards/default_image.png";
 import ModalEmploye from "./modals/ModalEmploye";
 
 const employeesData = [
@@ -91,9 +92,12 @@ const EmployeeCard = () => {
             >
               <div className="image-container">
                 <img
-                  src={importedImages[imageEmployee]}
+                  src={importedImages[imageEmployee] || defaultImage}
                   alt={`${employee.prenom} ${employee.nom}`}
                   className="employeeImage"
+                  onError={(e) => {
+                    e.target.src = defaultImage;
+                  }}
                 />
               </div>
               <div className="cardContent">
