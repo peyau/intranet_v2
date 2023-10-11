@@ -1,6 +1,7 @@
 import React from "react";
 import Modal from "react-modal";
 import importedImages from "../ImportImages.js"; // Import the images
+import defaultImage from "../../assets/img/cards/default_image.png";
 
 function ModalEmploye({ selectedEmployee, onClose }) {
   return (
@@ -20,10 +21,13 @@ function ModalEmploye({ selectedEmployee, onClose }) {
             src={
               importedImages[
                 `${selectedEmployee.prenom}_${selectedEmployee.nom}`
-              ]
+              ] || defaultImage
             }
             alt={`${selectedEmployee.prenom} ${selectedEmployee.nom}`}
             className="modal-employeeImage"
+            onError={(e) => {
+              e.target.src = defaultImage;
+            }}
           />
 
           <p>Fonction: {selectedEmployee.fonction}</p>

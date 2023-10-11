@@ -40,7 +40,6 @@ const employeesData = [
     telephone: "056/860.682",
     cercle: "Ceci est une information qu'on ne voit pas sur la page 'Equipe'",
   },
-
   // ... autres employés / Alimentation automatique par la BDD
 ];
 
@@ -60,8 +59,7 @@ const EmployeeCard = () => {
   const filteredEmployees = employeesData.filter(
     (employee) =>
       employee.nom.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      employee.prenom.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      employee.fonction.toLowerCase().includes(searchTerm.toLowerCase())
+      employee.prenom.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   // Tri par ordre alphabétique
