@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const FormulaireReservations = () => {
+const FormReservation = () => {
   const [materiel, setMateriel] = useState("");
   const [reservationType, setReservationType] = useState("");
   const [salle, setSalle] = useState("");
@@ -75,37 +75,34 @@ const FormulaireReservations = () => {
   };
 
   return (
-      <form onSubmit={handleFormSubmit}>
+    <form onSubmit={handleFormSubmit}>
+      <div className="input-field">
+        <label>Quelle réservation?</label>
+        <select value={materiel} onChange={(e) => setMateriel(e.target.value)}>
+          <option value="">Sélectionner le type</option>
+          <option value="berlingo">Berlingo</option>
+          <option value="salle">Salle</option>
+          <option value="materiel">Matériel</option>
+        </select>
+      </div>
+      {renderReservationFields()}
+      <div className="date-fields">
         <div className="input-field">
-          <label>Quelle réservation?</label>
-          <select
-            value={materiel}
-            onChange={(e) => setMateriel(e.target.value)}
-          >
-            <option value="">Sélectionner le type</option>
-            <option value="berlingo">Berlingo</option>
-            <option value="salle">Salle</option>
-            <option value="materiel">Matériel</option>
-          </select>
-        </div>
-        {renderReservationFields()}
-        <div className="date-fields">
-          <div className="input-field">
-            <label>Heure de début</label>
-            <input type="time" />
-          </div>
-          <div className="input-field">
-            <label>Heure de fin</label>
-            <input type="time" />
-          </div>
+          <label>Heure de début</label>
+          <input type="time" />
         </div>
         <div className="input-field">
-          <label>Motif</label>
-          <input type="text" />
+          <label>Heure de fin</label>
+          <input type="time" />
         </div>
-        <button className="form-button">Enregistrer</button>
-      </form>
+      </div>
+      <div className="input-field">
+        <label>Motif</label>
+        <input type="text" />
+      </div>
+      <button className="form-button">Enregistrer</button>
+    </form>
   );
 };
 
-export default FormulaireReservations;
+export default FormReservation;

@@ -1,29 +1,25 @@
 @import "./settings";
 
 @import "./components/calendriers/calendrier";
-@import "./components/calendriers/bigCalendrier";
 /* @import "react-calendar/dist/Calendar.css";  ---  Uniquement pour avoir le lien vers le fichier CSS de base */ 
+
+@import "./components/common/boutonConnexion";
+@import "./components/common/radioButtonSelector";
+@import "./components/common/tableData";
 
 @import "./components/formulaires/formulaire";
 
 @import "./components/navbars/navbar";
-@import "./components/navbars/navbarSecondaire";
 @import "./components/navbars/navbarGlobal";
+@import "./components/navbars/navbarSecondaire";
 @import "./components/navbars/titreEtLogo";
-@import "./components/modals/boutonConnexion";
-
-@import "./pages/infosPratiques/faq";
 
 @import "./components/modals/modals";
 @import "./components/modals/modalEmploye";
 
-@import "./components/employeeCard";
-@import "./components/tableData";
-@import "./components/tableDataSchedule";
-@import "./components/radioButtonSelector";
+@import "./components/pageComponents/equipe/employeeCard";
+@import "./components/pageComponents/horaire/tableDataSchedule";
 
-
-
-
+@import "./pages/infosPratiques/faq";
 
 

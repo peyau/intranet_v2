@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import NavBarGlobal from "../../components/navbars/NavBarGlobal";
 import NavBarInfosPratiques from "../../components/navbars/NavBarInfosPratiques";
-import AnimatedContainer from "../../components/AnimatedContainer";
-import TableData from "../../components/TableData";
-import RadioButtonSelector from "../../components/RadioButtonSelector";
+import AnimatedContainer from "../../components/common/AnimatedContainer";
+import TableData from "../../components/common/TableData";
+import RadioButtonSelector from "../../components/common/RadioButtonSelector";
 
 const NumerosTelephone = () => {
   const [selectedOption, setSelectedOption] = useState("interne");

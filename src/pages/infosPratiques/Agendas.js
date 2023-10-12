@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import NavBarGlobal from "../../components/navbars/NavBarGlobal";
 import NavBarInfosPratiques from "../../components/navbars/NavBarInfosPratiques";
 import BigCalendrierRetro from "../../components/calendriers/BigCalendrierRetro";
-import AnimatedContainer from "../../components/AnimatedContainer";
+import AnimatedContainer from "../../components/common/AnimatedContainer";
 import BigCalendrierVisite from "../../components/calendriers/BigCalendrierVisite";
 import BigCalendrierProjet from "../../components/calendriers/BigCalendrierProjet";
-import RadioButtonSelector from "../../components/RadioButtonSelector";
+import RadioButtonSelector from "../../components/common/RadioButtonSelector";
 
 const Agendas = () => {
   const [selectedOption, setSelectedOption] = useState("retro");
@@ -13,13 +13,13 @@ const Agendas = () => {
   const handleOptionChange = (value) => {
     setSelectedOption(value);
   };
-    
-    const options = [
-      { value: "retro", label: "Afficher le rétroplanning" },
-      { value: "visite", label: "Afficher les visites de classe" },
-      { value: "projet", label: "Afficher les projets" },
-    ];
-  
+
+  const options = [
+    { value: "retro", label: "Afficher le rétroplanning" },
+    { value: "visite", label: "Afficher les visites de classe" },
+    { value: "projet", label: "Afficher les projets" },
+  ];
+
   return (
     <div>
       <NavBarGlobal />
@@ -32,16 +32,9 @@ const Agendas = () => {
           onChange={handleOptionChange}
         />
 
-        {selectedOption === "retro" && (
-           <BigCalendrierRetro />
-        )}
-        {selectedOption === "visite" && (
-           <BigCalendrierVisite />
-        )}
-        {selectedOption === "projet" && (
-           <BigCalendrierProjet />
-        )}
-       
+        {selectedOption === "retro" && <BigCalendrierRetro />}
+        {selectedOption === "visite" && <BigCalendrierVisite />}
+        {selectedOption === "projet" && <BigCalendrierProjet />}
       </AnimatedContainer>
     </div>
   );

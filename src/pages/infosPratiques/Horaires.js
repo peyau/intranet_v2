@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import { getWeek } from "date-fns";
 import NavBarGlobal from "../../components/navbars/NavBarGlobal";
 import NavBarInfosPratiques from "../../components/navbars/NavBarInfosPratiques";
-import AnimatedContainer from "../../components/AnimatedContainer";
-import RadioButtonSelector from "../../components/RadioButtonSelector";
-import TableDataSchedule from "../../components/TableDataSchedule";
-import TableDataScheduleWeek from "../../components/TableDataScheduleWeek";
+import AnimatedContainer from "../../components/common/AnimatedContainer";
+import RadioButtonSelector from "../../components/common/RadioButtonSelector";
+import TableDataSchedule from "../../components/pageComponents/horaire/TableDataSchedule";
+import TableDataScheduleWeek from "../../components/pageComponents/horaire/TableDataScheduleWeek";
 
 const Horaires = () => {
   const [selectedOption, setSelectedOption] = useState(null);

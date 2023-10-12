@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ModalConnexion from "./ModalConnexion";
+import ModalConnexion from "../modals/ModalConnexion";
 
 const BoutonConnexion = () => {
   const [isModalOpen, setModalOpen] = useState(false);

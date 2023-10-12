@@ -1,8 +1,8 @@
 import React from "react";
 import NavBarGlobal from "../../components/navbars/NavBarGlobal";
 import NavBarInfosPratiques from "../../components/navbars/NavBarInfosPratiques";
-import AnimatedContainer from "../../components/AnimatedContainer";
-import EmployeeCard from "../../components/EmployeeCard";
+import AnimatedContainer from "../../components/common/AnimatedContainer";
+import EmployeeCard from "../../components/pageComponents/equipe/EmployeeCard";
 
 const Equipe = (employees) => {
   return (

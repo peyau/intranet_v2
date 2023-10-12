@@ -1,7 +1,7 @@
 import React from "react";
 import TitreLogo from "./TitreLogo";
 import NavBar from "./NavBar";
-import BoutonConnexion from "../modals/BoutonConnexion";
+import BoutonConnexion from "../common/BoutonConnexion";
 
 const NavBarGlobal = () => {
   return (
