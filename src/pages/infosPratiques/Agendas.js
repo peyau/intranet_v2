@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import NavBarGlobal from "../../components/navbars/NavBarGlobal";
 import NavBarInfosPratiques from "../../components/navbars/NavBarInfosPratiques";
-import BigCalendrierRetro from "../../components/calendriers/BigCalendrierRetro";
+import BigCalendrierRetro from "../../components/calendars/BigCalendrierRetro";
 import AnimatedContainer from "../../components/common/AnimatedContainer";
-import BigCalendrierVisite from "../../components/calendriers/BigCalendrierVisite";
-import BigCalendrierProjet from "../../components/calendriers/BigCalendrierProjet";
+import BigCalendrierVisite from "../../components/calendars/BigCalendrierVisite";
+import BigCalendrierProjet from "../../components/calendars/BigCalendrierProjet";
 import RadioButtonSelector from "../../components/common/RadioButtonSelector";
 
 const Agendas = () => {
