@@ -1,4 +1,4 @@
-$font-1: "font-1", "Century Gothic";
+$font-1: "font-1", "Century Gothic", "CenturyGothic", "AppleGothic";
 
 /* Automne */
 
@@ -95,8 +95,14 @@ h1::after {
 }
 
 .container {
-  width: 60%;
+  width: 60%; 
   margin: 0 auto;
+}
+
+@media (max-width: 1400px) {
+  .container {
+    width: 90%;
+  }
 }
 
 input,
