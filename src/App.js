@@ -14,8 +14,8 @@ import NumerosTelephone from "./pages/infosPratiques/NumerosTelephone";
 import Protocoles from "./pages/infosPratiques/Protocoles";
 import FAQ from "./pages/infosPratiques/FAQ";
 import Agendas from "./pages/infosPratiques/Agendas";
-import Calendrier from "./components/calendriers/Calendrier";
-import { DateProvider } from "./components/calendriers/DateContext";
+import Calendrier from "./components/calendars/Calendrier";
+import { DateProvider } from "./components/calendars/DateContext";
 import logoCalendrier from "./assets/img/logo_calendrier.png";
 
 const App = () => {

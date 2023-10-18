@@ -1,6 +1,6 @@
 // importImages.js
 const imagesContext = require.context(
-  "../assets/img/cards",
+  "../../../assets/img/cards",
   false,
   /\.(png|jpe?g|svg)$/
 );

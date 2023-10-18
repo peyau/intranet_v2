@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import importedImages from "./ImportImages.js";
-import defaultImage from "../assets/img/cards/default_image.png";
-import ModalEmploye from "./modals/ModalEmploye";
+import defaultImage from "../../../assets/img/cards/default_image.png";
+import ModalEmploye from "../../modals/ModalEmploye.js";
 
 const employeesData = [
   {

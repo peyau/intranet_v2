@@ -1,6 +1,6 @@
 import React from "react";
 import Modal from "react-modal";
-import importedImages from "../ImportImages.js"; // Import the images
+import importedImages from "../pageComponents/equipe/ImportImages.js"; // Import the images
 import defaultImage from "../../assets/img/cards/default_image.png";
 
 function ModalEmploye({ selectedEmployee, onClose }) {

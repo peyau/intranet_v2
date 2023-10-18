@@ -1,6 +1,6 @@
 import React from "react";
 import NavBarGlobal from "../components/navbars/NavBarGlobal";
-import AnimatedContainer from "../components/AnimatedContainer";
+import AnimatedContainer from "../components/common/AnimatedContainer";
 
 const PagePerso = () => {
   return (

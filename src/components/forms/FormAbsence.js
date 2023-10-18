@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import RadioButtonSelector from "../RadioButtonSelector";
+import RadioButtonSelector from "../common/RadioButtonSelector";
 
-const FormulaireAbsences = () => {
+const FormAbsence = () => {
   const [selectedOption, setSelectedOption] = useState("self");
 
   const handleOptionChange = (value) => {
@@ -26,11 +26,11 @@ const FormulaireAbsences = () => {
 
   return (
     <>
-        <RadioButtonSelector
-          options={options}
-          selectedOption={selectedOption}
-          onChange={handleOptionChange}
-        />
+      <RadioButtonSelector
+        options={options}
+        selectedOption={selectedOption}
+        onChange={handleOptionChange}
+      />
       <form onSubmit={handleFormSubmit}>
         {selectedOption === "colleague" && (
           <div className="input-field">
@@ -82,8 +82,8 @@ const FormulaireAbsences = () => {
         </div>
         <button className="form-button">Enregistrer</button>
       </form>
-      </>
+    </>
   );
 };
 
-export default FormulaireAbsences;
+export default FormAbsence;
